@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="logo">
+      <polygon id="dot" class="cls-1" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
+      <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
+      <polygon id="dot-3" data-name="dot" class="cls-1" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
+      <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
+      <path id="hash" class="cls-1" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
+    </g>
+  </g>
+</svg>
