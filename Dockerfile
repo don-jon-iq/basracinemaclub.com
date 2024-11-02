@@ -8,6 +8,6 @@ RUN npm install
 
 
 
-EXPOSE 3122
+EXPOSE 3111
 
 CMD [ "npm", "start" ]
