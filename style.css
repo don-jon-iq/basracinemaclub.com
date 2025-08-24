@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&amp;display=swap');
 
+/* Base styles and variables */
+:root {
+    --primary-color: #C54501;
+    --secondary-color: #DB9A03;
+    --accent-color: #337DCB;
+    --text-color: #ffffff;
+    --font-family: 'Almarai', sans-serif;
+    --transition-speed: 0.3s;
+}
 
 * {
     margin: 0;
@@ -8,14 +17,40 @@
 }
 
 body {
-    font-family: 'Almarai', sans-serif;
+    font-family: var(--font-family);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     position: relative;
+    color: var(--text-color);
+    line-height: 1.6;
 }
+
+/* Accessibility improvements */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Container and layout */
 .container {
-    background-color:#C54501;
+    background-color: var(--primary-color);
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -24,16 +59,158 @@ body {
     scroll-snap-type: y mandatory;
     position: fixed;
     top: 0;
-    right: -17px;
-    left:0;
+    right: 0;
+    left: 0;
     bottom: 0;
-    
+    -webkit-overflow-scrolling: touch;
 }
+
 .panel {    
     height: 100vh;
     position: relative;     
     z-index: 8;
-  }
+    scroll-snap-align: start;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 22px;  
+    height: 16vh;
+    z-index: 7;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.headers {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 20px;  
+    height: 15vh;
+    z-index: 11;
+}
+
+/* Logo and branding */
+.center {
+    position: relative;
+    z-index: 192;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-click {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-bg {
+    position: absolute;
+    scale: 45;
+    z-index: -9;
+    top: 77px;
+    width: 100%;
+    opacity: 0;
+}
+
+.logo-icon-container {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-icon {
+    width: 100%;
+    height: 100%;
+    transition: transform var(--transition-speed);
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .container {
+        right: 0;
+    }
+
+    .headers-hero {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .sec1-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar, .headers {
+        height: auto;
+        padding: 10px;
+    }
+
+    .left-side, .right-side {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .headers-hero h1 {
+        font-size: 28px;
+    }
+
+    .headers-hero p {
+        font-size: 16px;
+    }
+
+    .sec1-title h1 {
+        font-size: 24px;
+    }
+}
+
+/* Animation optimizations */
+.animated {
+    will-change: transform, opacity;
+}
+
+/* Print styles */
+@media print {
+    .container {
+        position: static;
+        overflow: visible;
+        height: auto;
+    }
+
+    .panel {
+        height: auto;
+        page-break-inside: avoid;
+    }
+
+    .navbar, .headers {
+        position: static;
+    }
+}
 
 /* bg and scroll anmition*/
 .scroll-indecator {
@@ -94,77 +271,20 @@ body {
     100% { opacity:0; }
   }
 
-
-
-.center {
-    position: relative;
-    z-index: 192;
-}
-.center-click {
-    width: 60px;
-    height: 60px;
-}
-.logo-bg {
-    position: absolute;
-    scale: 45;
-    z-index: -9;
-    top: 77px;
-    width: 100%;
-}
-
-.navbar {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 100%;
-    position: fixed;
-    top:0;
-    padding: 22px;  
-    height: 16vh;
-    z-index: 7;
-}
-.headers {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    position: fixed;
-    top:0;
-    padding: 20px;  
-    height: 15vh;
-    z-index: 11;
-}
-.left-side {
+.left-side, .right-side {
     width: 200px;
-
     position: relative;
     z-index: 194;
 }
-.left-side a {
-    place-content: center;
-    align-items: center;
-    
+.left-side a, .right-side a {
+    font-family: 'Almarai', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
     display: flex;
-    font-family: 'Almarai', sans-serif;
-    font-weight: 800;
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-}
-.right-side {
-    width: 200px;
-    
-    position: relative;
-}
-.right-side a {
-    
-    font-family: 'Almarai', sans-serif;
-    font-weight: 800;
-    color: #fff;
-    font-size: 18px;
-    position: relative;
-    z-index:999;
-    text-decoration: none;
+    align-items: center;
+    justify-content: center;
 }
 
 #logo {
@@ -173,7 +293,6 @@ body {
     z-index: 185;
 }
 
-
 #logo-title {
     margin-top: 20px;
     position: relative;
@@ -181,16 +300,7 @@ body {
     scale: 3;
 }
 
-
-
-
-
-
-
-
 /* sections */  
-
-
 
   /* hero section */
 .hero {
@@ -224,8 +334,6 @@ body {
     color: azure;
     font-weight: 800;
 }
-
-
 
   /* section1 */
 .sec1 {
@@ -291,7 +399,6 @@ body {
     margin-top: 10%;
 }
 
-
 .info-slider h1{
     font-size: 60px;
     font-weight: 900;
@@ -303,8 +410,6 @@ body {
     font-weight: 400;
     margin: 20px;
 }
-
-
 
   /* section 2 */
 .sec2 {
@@ -341,7 +446,6 @@ body {
 .plan-title img {
     margin: 0 10px;
 }
-
 
 .plan-title h1{
     font-size: 40px;
@@ -382,7 +486,6 @@ body {
     margin:0 10px;
 }
 
-
 /* section 4 */
 .sec4 {
     display: flex;
@@ -407,7 +510,6 @@ body {
 .statement-title  img {
     margin: 0 10px;
 }
-
 
 .statement-title  h1{
     font-size: 40px;
@@ -444,7 +546,6 @@ body {
     margin: 0 10px;
 }
 
-
 .value-title  h1{
     font-size: 40px;
     font-weight: 900;
@@ -463,9 +564,6 @@ body {
     margin-left: 160px;
 
 }
-
-
-
 
 /* footer*/
 .footer {
@@ -491,7 +589,6 @@ body {
 .historical-title  img {
     margin: 0 10px;
 }
-
 
 .historical-title  h1{
     font-size: 40px;
@@ -543,13 +640,6 @@ color: #f1f1f1;
 font-size: 16px;
 text-align: left;
 }
-
-
-
-
-
-
-
 
 /* season slider */
 
@@ -607,9 +697,6 @@ text-align: left;
     line-height: 115%;
 }
 
-
-
-
 .movies,.movies2,.movies3,.movies4,.movies5 {
     overflow: hidden;
 }
@@ -625,7 +712,6 @@ text-align: left;
     height: 100%;
     padding: 50px;
 }
-
 
 .slide2 {
     display: flex;
@@ -659,8 +745,6 @@ text-align: left;
     color: #f1f1f1;
     left: 1%;
 }
-
-
 
 .slider-img {
     width: 18%;
@@ -1021,9 +1105,6 @@ text-align: left;
     .season-descrabtion {
         font-size: 16px;
     }
-
-
-
 
 .director {
     padding-top: 10px;

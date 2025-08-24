@@ -6,37 +6,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basra Cinema Club - Your ultimate destination for movie connoisseurs in Iraq">
     <title>Basra Cinema Club</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Reusable SVG component
+        function createLogoIcon() {
+            return `<svg class="logo-icon" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91" aria-hidden="true">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #fff;
+                        }
+                    </style>
+                </defs>
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <g>
+                        <polygon class="cls-1" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
+                        <rect class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
+                        <polygon class="cls-1" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
+                        <rect class="cls-1" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
+                        <path class="cls-1" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
+                    </g>
+                </g>
+            </svg>`;
+        }
+    </script>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <div class="container" id="main">   
-        <div class="scroll-indecator">
+        <div class="scroll-indecator" role="status" aria-label="Scroll indicator">
             <h3>scroll</h3>
-            <span class="scroll-icon">
+            <span class="scroll-icon" aria-hidden="true">
                 <span class="scroll-icon__wheel-outer">
                     <span class="scroll-icon__wheel-inner"></span>
                 </span>
             </span>
         </div>
-        <div class="headers">
+        
+        <header class="headers" role="banner">
             <div class="right-side">
-                <a href="Season.html">Movie Screening</a>
+                <a href="Season.html" aria-label="View movie screenings">Movie Screening</a>
             </div>
-            <a class="center-click" href="index-2.html">
-
+            <a class="center-click" href="index-2.html" aria-label="Home">
+                <div class="logo-icon-container"></div>
             </a>
             <div class="left-side">
+                <a href="#join-club" aria-label="Join our club">Join Club</a>
+            </div>
+        </header>
 
-                <a>Join Club</a>
-            </div>
-        </div>
-        <nav class="navbar">
-            <div class="right-side">
-            </div>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="right-side"></div>
             <div class="center" id="center">
-                <div class="logo-bg">
+                <div class="logo-bg" id="logo-bg" aria-hidden="true">
                     <svg id="logo-bg" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 3915.81 3915.81">
                         <defs>
@@ -58,30 +84,10 @@
                         </g>
                     </svg>
                 </div>
-                <svg id="logo" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: #fff;
-                            }
-                        </style>
-                    </defs>
-                    <g id="Layer_1-2" data-name="Layer 1">
-                        <g>
-                            <polygon id="dot" class="cls-1"
-                                points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45" />
-                            <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63"
-                                transform="translate(8.5 34.14) rotate(-45)" />
-                            <polygon id="dot-3" data-name="dot" class="cls-1"
-                                points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12" />
-                            <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63"
-                                transform="translate(-30.15 18.13) rotate(-45)" />
-                            <path id="hash" class="cls-1"
-                                d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z" />
-                        </g>
-                    </g>
-                </svg>
-                <svg id="logo-title" viewBox="0 0 473 70" xmlns="http://www.w3.org/2000/svg">
+                <a class="center-click" href="index-2.html" aria-label="Home">
+                    <div class="logo-icon-container" id="logo"></div>
+                </a>
+                <svg id="logo-title" viewBox="0 0 473 70" xmlns="http://www.w3.org/2000/svg" aria-label="Basra Cinema Club">
                     <g clip-path="url(#clip0_12_4)">
                         <path
                             d="M271.62 59.7751C270.42 59.0528 268.823 58.3806 266.831 57.7543C265.951 58.6394 265.009 59.8127 264.001 61.2782C263.142 60.0048 261.013 58.8315 257.606 57.7543C255.527 59.9087 253.976 62.2511 252.946 64.773C255.432 65.8711 257.756 67.4034 259.922 69.3658C261.358 68.1801 262.536 66.8523 263.457 65.3868C265.599 66.5308 267.487 67.8544 269.113 69.3658C270.225 68.4807 271.308 67.3116 272.358 65.8544C273.408 64.3972 273.848 63.2281 273.678 62.3471C273.508 61.3534 272.819 60.4975 271.62 59.7751Z"
@@ -118,228 +124,135 @@
                     </defs>
                 </svg>
             </div>
-            <div class="left-side">
-            </div>
+            <div class="left-side"></div>
         </nav>
 
-        <section class="hero panel">
-
-            <div class="headers-hero">
-                <h1>Basra Cinema Club</h1>
-                <p>your ultimate destination for movie connoisseurs in Iraq. We celebrate the magic of cinema by creating awareness of remarkable films, hosting events, and bringing people together who share a passion for film.</p>
-                <p>Our club is dedicated to nurturing a community of movie enthusiasts eager to delve into thought-provoking and captivating films that challenge conventions and expand horizons.</p>
-                <p>Join us and embark on a cinematic journey like no other. Be a part of the quest to discover meaningful stories, artistry, and talent behind the silver screen.</p>
-            </div>
-
-            
-            <img class="img-sec" src="img/%d8%a8%d8%af%d8%b1_%d8%b4%d8%a7%d9%83%d8%b1_%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%a8_2%20(1)%201.png" />
-            
-        </section>
-
-        <section class="sec1 panel">
-
-            <div class="vision" >
-                <div class="sec1-title">
-                    <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Vision</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+        <main id="main-content">
+            <section class="hero panel" aria-labelledby="hero-title">
+                <div class="headers-hero">
+                    <h1 id="hero-title">Basra Cinema Club</h1>
+                    <p>Your ultimate destination for movie connoisseurs in Iraq. We celebrate the magic of cinema by creating awareness of remarkable films, hosting events, and bringing people together who share a passion for film.</p>
+                    <p>Our club is dedicated to nurturing a community of movie enthusiasts eager to delve into thought-provoking and captivating films that challenge conventions and expand horizons.</p>
+                    <p>Join us and embark on a cinematic journey like no other. Be a part of the quest to discover meaningful stories, artistry, and talent behind the silver screen.</p>
                 </div>
-                <p>To be the most influential cultural art hub in Iraq and empower the sense of artistic aspect
-                    of the youth.</p>
-            </div>
-            <div class="mission" >
-                <div class="sec1-title">
-                    <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Mission</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
-                </div>
-                <p>By introducing a new perspective of independent cinema with viewer engagement.</p>
+                <img class="img-sec" src="img/%d8%a8%d8%af%d8%b1_%d8%b4%d8%a7%d9%83%d8%b1_%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%a8_2%20(1)%201.png" alt="Cinema club illustration" />
+            </section>
 
-            </div>
-            <div class="objectives">
-                <div class="sec1-title">
-                    <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Objectives</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+            <section class="sec1 panel">
+                <div class="vision" >
+                    <div class="sec1-title">
+                        <span class="left-bar"></span>
+                        <div class="logo-icon-container"></div>
+                        <h1>Vision</h1>
+                        <div class="logo-icon-container"></div>
+                        <span class="right-bar"></span>
+                    </div>
+                    <p>To be the most influential cultural art hub in Iraq and empower the sense of artistic aspect
+                        of the youth.</p>
+                </div>
+                <div class="mission" >
+                    <div class="sec1-title">
+                        <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Mission</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+                    </div>
+                    <p>By introducing a new perspective of independent cinema with viewer engagement.</p>
+                </div>
+                <div class="objectives">
+                    <div class="sec1-title">
+                        <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Objectives</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+                    </div>
+                    
+                    <p><img src="logo.svg" width="15" style="margin-right: 5px;"> The club aims to be a hub for boosting creativity.</p>
+                    <p><img src="logo.svg" width="15" style="margin-right: 5px;"> make real contribution to increase the awareness in art of cinema, and then will be a host
+                        for creative workshops concerning filmmaking, screenwriting, cinematography and so on .</p>
+                </div>
+            </section>
+            <section class="sec2 panel">
+                <div class="space-100"></div>
+                <div class="space-100"></div>
+                <div class="plan" >
+                    <div class="plan-title">
+                        <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Long-term plan</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+                    </div>
+                    <div class="pargraph">
+                        <ul>
+                            <li style="margin-bottom: 5px;" ><img src="logo.svg" width="15" style="margin-right: 5px;"> As a co-working space of a creatives .</li>
+                            <li style="margin-bottom: 5px;"><img src="logo.svg" width="15" style="margin-right: 5px;"> Producing its own content by it's members</li>
+                            <li style="margin-bottom: 5px;"><img src="logo.svg" width="15" style="margin-right: 5px;"> hosting photography exhibition and other cultural ones</li>
+                            <li style="margin-bottom: 5px;"><img src="logo.svg" width="15" style="margin-right: 5px;"> Having workshops and courses on filmmaking and other creative industry subjects .</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <p><img src="logo.svg" width="15" style="margin-right: 5px;"> The club aims to be a hub for boosting creativity.</p>
-                <p><img src="logo.svg" width="15" style="margin-right: 5px;"> make real contribution to increase the awareness in art of cinema, and then will be a host
-                    for creative workshops concerning filmmaking, screenwriting, cinematography and so on .</p>
-            </div>
-        </section>
-        <section class="sec2 panel">
-            <div class="space-100"></div>
-            <div class="space-100"></div>
-            <div class="plan" >
-                <div class="plan-title">
-                    <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Long-term plan</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
-                </div>
-                <div class="pargraph">
-                    <ul>
-                        <li style="margin-bottom: 5px;" ><img src="logo.svg" width="15" style="margin-right: 5px;"> As a co-working space of a creatives .</li>
-                        <li style="margin-bottom: 5px;"><img src="logo.svg" width="15" style="margin-right: 5px;"> Producing its own content by it’s members</li>
-                        <li style="margin-bottom: 5px;"><img src="logo.svg" width="15" style="margin-right: 5px;"> hosting photography exhibition and other cultural ones</li>
-                        <li style="margin-bottom: 5px;"><img src="logo.svg" width="15" style="margin-right: 5px;"> Having workshops and courses on filmmaking and other creative industry subjects .</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="workshop-gallery">
-                <div class="space-50"></div>
-                <div class="wrapper-text">
-                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
-                        <defs>
-                          <style>
-                            .cls-1 {
-                              fill: #fff;
-                            }
-                          </style>
-                        </defs>
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <g id="logo">
-                            <polygon id="dot" class="cls-1" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
-                            <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
-                            <polygon id="dot-3" data-name="dot" class="cls-1" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
-                            <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
-                            <path id="hash" class="cls-1" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
-                          </g>
-                        </g>
-                      </svg> 
-                    <h1> Film discussion </h1> 
-                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
-                        <defs>
-                          <style>
-                            .cls-1 {
-                              fill: #fff;
-                            }
-                          </style>
-                        </defs>
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <g id="logo">
-                            <polygon id="dot" class="cls-1" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
-                            <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
-                            <polygon id="dot-3" data-name="dot" class="cls-1" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
-                            <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
-                            <path id="hash" class="cls-1" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
-                          </g>
-                        </g>
-                      </svg> <h1>Film screening </h1>   <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
-                        <defs>
-                          <style>
-                            .cls-1 {
-                              fill: #fff;
-                            }
-                          </style>
-                        </defs>
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <g id="logo">
-                            <polygon id="dot" class="cls-1" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
-                            <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
-                            <polygon id="dot-3" data-name="dot" class="cls-1" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
-                            <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
-                            <path id="hash" class="cls-1" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
-                          </g>
-                        </g>
-                      </svg> 
-                      <h1> Film discussion </h1>
-                      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
-                        <defs>
-                          <style>
-                            .cls-1 {
-                              fill: #fff;
-                            }
-                          </style>
-                        </defs>
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <g id="logo">
-                            <polygon id="dot" class="cls-1" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
-                            <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
-                            <polygon id="dot-3" data-name="dot" class="cls-1" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
-                            <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
-                            <path id="hash" class="cls-1" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
-                          </g>
-                        </g>
-                      </svg> 
-                      <h1>Film screening </h1>
-                      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
-                        <defs>
-                          <style>
-                            .cls-1 {
-                              fill: #fff;
-                            }
-                          </style>
-                        </defs>
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <g id="logo">
-                            <polygon id="dot" class="cls-1" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
-                            <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
-                            <polygon id="dot-3" data-name="dot" class="cls-1" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
-                            <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
-                            <path id="hash" class="cls-1" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
-                          </g>
-                        </g>
-                      </svg> 
-                </div>
-                <div class="space-50"></div> 
-                <div class="workshop-gallery-1">
-                    <ul class="wrapper">
-                        <img src="img/workshop-img/photo_5239987215428338975_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5239987215428338976_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5239987215428338977_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5424735306680223869_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5424735306680223870_y.jpg"  alt="">
-                    </ul>
-                </div>
-                <div class="space-50"></div> 
-                <div class="workshop-gallery-2">
-                    <ul class="wrapper">
-                        <img src="img/workshop-img/photo_5467836557626035676_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5467836557626035675_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5467836557626035673_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5424735306680223883_y.jpg"  alt="">
-                        <img src="img/workshop-img/photo_5424735306680223879_y.jpg"  alt="">
-                    </ul>
-                </div>
-                <div class="space-50"></div> 
-                
-            </div>
-            
-           
-        </section>
-        <section class="sec4 panel">
-            <div class="statement">
-                <div class="statement-title">
-                    <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Problem statement</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
-                </div>
-                <p>The degradation of our civil society,the disconnectedness with our historical identity,due to
-                    the many years of wars,and corruption produces a distorted mindset and knowledge toward art
-                    in general and
-                    cinema in specific due to there’s no deep tradition and history in Iraq with the art of
-                    cinema .</p>
-            </div>
-            <div class="value">
-                <div class="value-title">
-                    <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Value proposition</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
-                </div>
-                <p>Bring in-depth knowledge and awareness of independent cinema and its value to a democratic
-                    community through a methodological programs.</p>
-            </div>
-
-        </section>
-        <section class="footer panel">
-            <div class="historical-background">
-                <div class="historical-title">
-                    <span class="left-bar"></span><img src="logo.svg" width="50"> <h1> Historical background </h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
-                </div>
-                <p>First it has been founded in 2016 by mohammed sabah , and run for two years , was screened more than 30 films . each screening was including an introduction and Q&A session . </p>
-            </div>
-            <div class="footer-div">
-                <div class="copywrite">
-                    © 2023 Basra Cinema Club. All rights reserved.
-                </div>
-                <div class="socail">
-                    <li class="insta"><a href="https://www.instagram.com/basra.cinemaclub/"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path d="M 0 0 L 32 0 L 32 32 L 0 32 Z" fill="transparent"></path><path d="M 12 16 C 12 13.791 13.791 12 16 12 C 18.209 12 20 13.791 20 16 C 20 18.209 18.209 20 16 20 C 13.791 20 12 18.209 12 16 Z" fill="#f1f1f1"></path><path d="M 21.5 3.5 L 10.5 3.5 C 6.634 3.5 3.5 6.634 3.5 10.5 L 3.5 21.5 C 3.5 25.366 6.634 28.5 10.5 28.5 L 21.5 28.5 C 25.366 28.5 28.5 25.366 28.5 21.5 L 28.5 10.5 C 28.5 6.634 25.366 3.5 21.5 3.5 Z M 16 22 C 12.686 22 10 19.314 10 16 C 10 12.686 12.686 10 16 10 C 19.314 10 22 12.686 22 16 C 22 19.314 19.314 22 16 22 Z M 22.5 11 C 21.672 11 21 10.328 21 9.5 C 21 8.672 21.672 8 22.5 8 C 23.328 8 24 8.672 24 9.5 C 24 10.328 23.328 11 22.5 11 Z" fill="#f1f1f1"></path></svg></a></li>
+                <div class="workshop-gallery">
+                    <div class="space-50"></div>
+                    <div class="wrapper-text">
+                        <div class="logo-icon-container"></div>
+                        <h1> Film discussion </h1> 
+                    </div>
+                    <div class="space-50"></div> 
+                    <div class="workshop-gallery-1">
+                        <ul class="wrapper">
+                            <img src="img/workshop-img/photo_5239987215428338975_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5239987215428338976_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5239987215428338977_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5424735306680223869_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5424735306680223870_y.jpg"  alt="">
+                        </ul>
+                    </div>
+                    <div class="space-50"></div> 
+                    <div class="workshop-gallery-2">
+                        <ul class="wrapper">
+                            <img src="img/workshop-img/photo_5467836557626035676_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5467836557626035675_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5467836557626035673_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5424735306680223883_y.jpg"  alt="">
+                            <img src="img/workshop-img/photo_5424735306680223879_y.jpg"  alt="">
+                        </ul>
+                    </div>
+                    <div class="space-50"></div> 
+                    
                 </div>
                 
-            </div>
-        </section>
-        
-
+               
+            </section>
+            <section class="sec4 panel">
+                <div class="statement">
+                    <div class="statement-title">
+                        <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Problem statement</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+                    </div>
+                    <p>The degradation of our civil society,the disconnectedness with our historical identity,due to
+                        the many years of wars,and corruption produces a distorted mindset and knowledge toward art
+                        in general and
+                        cinema in specific due to there's no deep tradition and history in Iraq with the art of
+                        cinema .</p>
+                </div>
+                <div class="value">
+                    <div class="value-title">
+                        <span class="left-bar"></span><img src="logo.svg" width="50"> <h1>Value proposition</h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+                    </div>
+                    <p>Bring in-depth knowledge and awareness of independent cinema and its value to a democratic
+                        community through a methodological programs.</p>
+                </div>
+            </section>
+            <section class="footer panel">
+                <div class="historical-background">
+                    <div class="historical-title">
+                        <span class="left-bar"></span><img src="logo.svg" width="50"> <h1> Historical background </h1> <img src="logo.svg" width="50"><span class="right-bar"></span>
+                    </div>
+                    <p>First it has been founded in 2016 by mohammed sabah , and run for two years , was screened more than 30 films . each screening was including an introduction and Q&A session . </p>
+                </div>
+                <div class="footer-div">
+                    <div class="copywrite">
+                        © 2023 Basra Cinema Club. All rights reserved.
+                    </div>
+                    <div class="socail">
+                        <li class="insta"><a href="https://www.instagram.com/basra.cinemaclub/"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path d="M 0 0 L 32 0 L 32 32 L 0 32 Z" fill="transparent"></path><path d="M 12 16 C 12 13.791 13.791 12 16 12 C 18.209 12 20 13.791 20 16 C 20 18.209 18.209 20 16 20 C 13.791 20 12 18.209 12 16 Z" fill="#f1f1f1"></path><path d="M 21.5 3.5 L 10.5 3.5 C 6.634 3.5 3.5 6.634 3.5 10.5 L 3.5 21.5 C 3.5 25.366 6.634 28.5 10.5 28.5 L 21.5 28.5 C 25.366 28.5 28.5 25.366 28.5 21.5 L 28.5 10.5 C 28.5 6.634 25.366 3.5 21.5 3.5 Z M 16 22 C 12.686 22 10 19.314 10 16 C 10 12.686 12.686 10 16 10 C 19.314 10 22 12.686 22 16 C 22 19.314 19.314 22 16 22 Z M 22.5 11 C 21.672 11 21 10.328 21 9.5 C 21 8.672 21.672 8 22.5 8 C 23.328 8 24 8.672 24 9.5 C 24 10.328 23.328 11 22.5 11 Z" fill="#f1f1f1"></path></svg></a></li>
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@408/swiper-bundle.min.js"> </script>

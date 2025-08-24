@@ -1,39 +1,82 @@
-
-
 gsap.registerPlugin(ScrollTrigger)
 
- const mouseMoveBG = () => {
-  const contaner =  document.getElementById("center");
-  const logo =  document.getElementById("logo");
-  const logoBG =  document.getElementById("logo-bg");
-  const logoTitle =  document.getElementById("logo-title");
+// Initialize SVG components
+document.addEventListener('DOMContentLoaded', () => {
+    const logoContainers = document.querySelectorAll('.logo-icon-container');
+    logoContainers.forEach(container => {
+        container.innerHTML = createLogoIcon();
+    });
+});
 
+// Optimize animations
+const optimizeAnimations = () => {
+    // Use will-change for elements that will animate
+    const animatedElements = document.querySelectorAll('.logo-bg, #logo, #logo-title, .left-side, .right-side, .scroll-icon, .img-sec, .headers-hero h1, .headers-hero p');
+    animatedElements.forEach(el => {
+        el.style.willChange = 'transform, opacity';
+    });
+};
 
+// Debounce function for performance
+const debounce = (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+};
 
+// Optimize mouse move event
+const mouseMoveBG = () => {
+    const container = document.getElementById("center");
+    const logo = document.getElementById("logo");
+    const logoBG = document.getElementById("logo-bg");
+    const logoTitle = document.getElementById("logo-title");
 
-  contaner.addEventListener( "mousemove" , (e) => {
-  
-    let xAxis = (window.innerWidth / 2 - e.pageX) / 40;
-    let yAxis = (window.innerHeight / 2 - e.pageY) / 40;
-    
-    logo.style.transform = `translateY(${yAxis}px) translateX(${xAxis}px)`;
-    logoBG.style.transform = `translateY(${yAxis / 30 }px ) translateX(${xAxis / 30 }px)`;
-  });
-  
+    const handleMouseMove = debounce((e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
+        
+        requestAnimationFrame(() => {
+            if (logo) logo.style.transform = `translateY(${yAxis}px) translateX(${xAxis}px)`;
+            if (logoBG) logoBG.style.transform = `translateY(${yAxis / 30}px) translateX(${xAxis / 30}px)`;
+        });
+    }, 16); // 60fps
 
-  contaner.addEventListener( "mouseenter" , (e) => {
-    logo.style.transition = "none";
-    logoBG.style.transition = "none";
-  });
-  contaner.addEventListener( "mouseleave" , (e) => {
-    logo.style.transition = "all .5s ease";
-    logo.style.transform = `translateY(0) translateX(0) `;
-    logoBG.style.transition = "all .5s ease";
-    logoBG.style.transform = `translateY(0) translateX(0) `;
-  });
+    if (container) {
+        container.addEventListener("mousemove", handleMouseMove);
+        container.addEventListener("mouseenter", () => {
+            if (logo) logo.style.transition = "none";
+            if (logoBG) logoBG.style.transition = "none";
+        });
+        container.addEventListener("mouseleave", () => {
+            if (logo) {
+                logo.style.transition = "all .5s ease";
+                logo.style.transform = "translateY(0) translateX(0)";
+            }
+            if (logoBG) {
+                logoBG.style.transition = "all .5s ease";
+                logoBG.style.transform = "translateY(0) translateX(0)";
+            }
+        });
+    }
+};
 
- }
- const Seasons = () => {
+// Optimize scroll animations
+const optimizeScrollAnimations = () => {
+    ScrollTrigger.defaults({
+        toggleActions: "play complete restart reset",
+        scroller: ".container",
+        fastScrollEnd: true,
+        preventOverlaps: true
+    });
+};
+
+const Seasons = () => {
   const swiper = new Swiper('.swiper2', {
     navigation: {
       nextEl: '.swiper-button-next',
@@ -61,6 +104,10 @@ const heroPs = SplitType.create('.headers-hero p')
 
 
 window.onload=function(){ 
+  optimizeAnimations();
+  optimizeScrollAnimations();
+  mouseMoveBG();
+  
   const tlLoad = gsap.timeline({});
   tlLoad.set(".container" , { visibility: "visible" })
         .set(".container-season" , { visibility: "visible" })
@@ -74,9 +121,6 @@ window.onload=function(){
         .from(".img-sec" , { opacity:0,scale:.7,y:100 ,duration: 2.5, ease: "power3.out"},1,"loading")
         .from(".headers-hero h1" , { opacity:0,y:50 ,duration: 1.5, ease: "power3.out"},1.5,"loading")
         .from(heroPs.lines , { opacity:0,y:50 ,duration: 1.5,stagger:.1, ease: "power3.out"},1.8,"loading")
-
-        mouseMoveBG();
-
 }
 
 const tl1 = gsap.timeline({delay:.5});
@@ -94,11 +138,6 @@ const sec1Pobjectives = SplitType.create('.objectives p');
 .from(sec1Pmission.words , {  opacity:0,y:20,stagger:.1, ease: "power2.out"},"sec1")
 .from(sec1Pobjectives.words , {  opacity:0,y:20,stagger:.1, ease: "power2.out"},"sec1")
 
-    ScrollTrigger.defaults({
-      
-  toggleActions: "play complete restart reset",
-      scroller: ".container"
-    });
 ScrollTrigger.create({
   trigger: ".sec1",
   animation:tl1,
