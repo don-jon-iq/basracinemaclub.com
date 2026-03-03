@@ -64,32 +64,68 @@ gsap.to('.value-prop', {
   opacity: 1, y: 0, duration: 0.75, delay: 0.15, ease: 'power2.out',
 });
 
-// ---- GALLERY ----
-gsap.to('.gallery-item', {
-  scrollTrigger: {
-    trigger: '.gallery-grid',
-    start: isMobile ? 'top 95%' : 'top 88%',
-  },
-  opacity: 1, y: 0,
-  duration: 0.55,
-  stagger: isMobile ? 0.06 : 0.07,
-  ease: 'power2.out',
-});
-
-// ---- GALLERY PARALLAX on desktop ----
-if (!isMobile && !prefersReduced) {
-  document.querySelectorAll('.gallery-item').forEach((el, i) => {
-    gsap.to(el, {
-      scrollTrigger: {
-        trigger: '.gallery-grid',
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 0.5 + (i % 3) * 0.3,
+// ---- GALLERY CAROUSEL (mobile) ----
+if (typeof Swiper !== 'undefined') {
+  const gallerySwiper = new Swiper('.gallery-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    centeredSlides: true,
+    grabCursor: true,
+    loop: true,
+    speed: 500,
+    freeMode: { enabled: true, momentum: true, momentumRatio: 0.5 },
+    on: {
+      slideChange(swiper) {
+        const total = swiper.slides.length - (swiper.loopedSlides || 0) * 2;
+        const real = swiper.realIndex + 1;
+        const cur = document.querySelector('.gallery-current');
+        if (cur) cur.textContent = real;
+        const bar = document.querySelector('.gallery-progress-bar');
+        if (bar) bar.style.width = ((real / total) * 100) + '%';
       },
-      y: (i % 2 === 0) ? -20 : 20,
-      ease: 'none',
+      init(swiper) {
+        const total = swiper.slides.length;
+        const tot = document.querySelector('.gallery-total');
+        if (tot) tot.textContent = total > 20 ? 10 : Math.min(total, 10);
+      }
+    }
+  });
+}
+
+// ---- GALLERY MASONRY (desktop) ----
+if (!isMobile) {
+  // Staggered column reveal
+  document.querySelectorAll('.gallery-col').forEach((col, colIdx) => {
+    const items = col.querySelectorAll('.gallery-item');
+    gsap.to(items, {
+      scrollTrigger: {
+        trigger: '.gallery-masonry',
+        start: 'top 85%',
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      stagger: 0.12,
+      delay: colIdx * 0.08,
+      ease: 'power2.out',
     });
   });
+
+  // Parallax scrub per column
+  if (!prefersReduced) {
+    document.querySelectorAll('.gallery-col').forEach((col, i) => {
+      gsap.to(col, {
+        scrollTrigger: {
+          trigger: '.gallery-masonry',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 0.8 + i * 0.2,
+        },
+        y: i % 2 === 0 ? -40 : 40,
+        ease: 'none',
+      });
+    });
+  }
 }
 
 // ---- ROADMAP ----

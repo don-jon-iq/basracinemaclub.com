@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -91,32 +92,83 @@
       <h2 class="section-title">Film <em>Discussions</em></h2>
       <p class="gallery-sub">Real screenings. Real conversations.</p>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5239987215428338975_y.jpg" alt="Film discussion event">
-      </div>
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5239987215428338976_y.jpg" alt="Cinema screening">
-      </div>
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5239987215428338977_y.jpg" alt="Audience discussion">
-      </div>
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5424735306680223869_y.jpg" alt="Film event">
-      </div>
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5424735306680223870_y.jpg" alt="Cinema club gathering">
-      </div>
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5467836557626035676_y.jpg" alt="Movie screening night">
-      </div>
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5467836557626035675_y.jpg" alt="Discussion session">
-      </div>
-      <div class="gallery-item" data-anim="gallery">
-        <img src="img/workshop-img/photo_5424735306680223883_y.jpg" alt="Club members">
+
+    <!-- MOBILE: Full-bleed swipe carousel -->
+    <div class="gallery-carousel">
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5239987215428338975_y.jpg" alt="Film discussion">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5239987215428338976_y.jpg" alt="Cinema screening">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5239987215428338977_y.jpg" alt="Audience discussion">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5424735306680223869_y.jpg" alt="Film event">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5424735306680223870_y.jpg" alt="Cinema gathering">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5467836557626035676_y.jpg" alt="Screening night">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5467836557626035675_y.jpg" alt="Discussion">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5424735306680223883_y.jpg" alt="Club members">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5467836557626035673_y.jpg" alt="Event">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+          <div class="swiper-slide gallery-slide">
+            <img src="img/workshop-img/photo_5424735306680223879_y.jpg" alt="Cinema club">
+            <div class="gallery-slide-overlay"></div>
+          </div>
+        </div>
+        <div class="gallery-progress">
+          <div class="gallery-progress-bar"></div>
+        </div>
+        <div class="gallery-counter"><span class="gallery-current">1</span> / <span class="gallery-total">10</span></div>
       </div>
     </div>
+
+    <!-- DESKTOP: Staggered masonry grid -->
+    <div class="gallery-masonry">
+      <div class="gallery-col">
+        <div class="gallery-item"><img src="img/workshop-img/photo_5239987215428338975_y.jpg" alt="Film discussion"></div>
+        <div class="gallery-item gallery-item--tall"><img src="img/workshop-img/photo_5239987215428338976_y.jpg" alt="Cinema screening"></div>
+        <div class="gallery-item"><img src="img/workshop-img/photo_5424735306680223879_y.jpg" alt="Event"></div>
+      </div>
+      <div class="gallery-col gallery-col--offset">
+        <div class="gallery-item gallery-item--tall"><img src="img/workshop-img/photo_5239987215428338977_y.jpg" alt="Audience discussion"></div>
+        <div class="gallery-item"><img src="img/workshop-img/photo_5424735306680223869_y.jpg" alt="Film event"></div>
+        <div class="gallery-item"><img src="img/workshop-img/photo_5424735306680223870_y.jpg" alt="Gathering"></div>
+      </div>
+      <div class="gallery-col">
+        <div class="gallery-item"><img src="img/workshop-img/photo_5467836557626035676_y.jpg" alt="Screening night"></div>
+        <div class="gallery-item gallery-item--tall"><img src="img/workshop-img/photo_5467836557626035675_y.jpg" alt="Discussion"></div>
+        <div class="gallery-item"><img src="img/workshop-img/photo_5424735306680223883_y.jpg" alt="Club members"></div>
+      </div>
+      <div class="gallery-col gallery-col--offset">
+        <div class="gallery-item gallery-item--tall"><img src="img/workshop-img/photo_5467836557626035673_y.jpg" alt="Event"></div>
+        <div class="gallery-item"><img src="img/workshop-img/photo_5239987215428338975_y.jpg" alt="Film discussion"></div>
+        <div class="gallery-item"><img src="img/workshop-img/photo_5424735306680223879_y.jpg" alt="Cinema club"></div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ROADMAP -->
@@ -186,6 +238,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
