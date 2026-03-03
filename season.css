@@ -200,24 +200,36 @@ img { display: block; max-width: 100%; }
   opacity: 0;
 }
 
-/* ---- SWIPER FILM CARDS ---- */
-.swiper {
-  overflow: visible !important;
-  padding-bottom: 56px !important;
+/* ---- NATIVE SCROLL FILM TRACK ---- */
+.film-track {
+  display: flex;
+  gap: 3px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 var(--pad) 40px;
+  /* Never block vertical scroll */
+  touch-action: pan-x pan-y;
 }
+.film-track::-webkit-scrollbar { display: none; }
 
-.film-slide {
-  width: clamp(240px, 75vw, 320px) !important;
+.film-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: clamp(240px, 72vw, 310px);
   background: var(--card);
   border: 1px solid var(--border);
-  transition: border-color 0.3s, transform 0.3s;
-  flex-shrink: 0;
+  transition: border-color 0.3s;
 }
 
 @media (max-width: 480px) {
-  .film-slide {
-    width: 82vw !important;
-  }
+  .film-card { width: 82vw; }
+}
+@media (min-width: 1200px) {
+  .film-card { width: 280px; }
 }
 
 @media (hover: hover) {
@@ -236,12 +248,14 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
   filter: grayscale(0.3) brightness(0.8);
   transition: filter 0.4s, transform 0.5s;
+  display: block;
 }
 @media (hover: hover) {
-  .film-slide:hover .film-poster img {
+  .film-card:hover .film-poster img {
     filter: grayscale(0) brightness(1);
     transform: scale(1.04);
   }
+  .film-card:hover { border-color: rgba(200,90,0,0.4); }
 }
 
 .film-info { padding: clamp(16px, 3vw, 24px); }
@@ -274,35 +288,48 @@ img { display: block; max-width: 100%; }
   line-height: 1.6;
 }
 
-/* ---- SWIPER NAV BUTTONS ---- */
-.swiper-button-prev,
-.swiper-button-next {
-  color: var(--amber) !important;
-  background: rgba(8,8,8,0.95) !important;
-  width: 40px !important;
-  height: 40px !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 0 !important;
-  transition: border-color 0.2s !important;
-  top: calc(50% - 28px) !important;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after { font-size: 14px !important; font-weight: 700 !important; }
-.swiper-button-prev:hover,
-.swiper-button-next:hover { border-color: var(--amber) !important; }
-
-/* Mobile: hide prev/next on very small screens (swipe only) */
-@media (max-width: 480px) {
-  .swiper-button-prev,
-  .swiper-button-next { display: none !important; }
-}
-
 /* ---- DIRECTOR RETROSPECTIVE ---- */
 .retro-section { background: var(--black); }
 
-.director-slide {
-  width: 100% !important;
-  display: grid !important;
+.director-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  touch-action: pan-x pan-y;
+  gap: 0;
+}
+.director-track::-webkit-scrollbar { display: none; }
+
+/* Nav buttons for director track */
+.director-nav {
+  display: flex;
+  gap: 2px;
+  margin-top: 20px;
+  padding: 0 var(--pad);
+}
+.director-nav-btn {
+  padding: 10px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.director-nav-btn:hover,
+.director-nav-btn.active { background: rgba(200,90,0,0.15); color: var(--amber); border-color: rgba(200,90,0,0.4); }
+
+.director-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  display: grid;
   grid-template-columns: 300px 1fr;
   min-height: 480px;
   background: var(--card);
@@ -310,8 +337,8 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 700px) {
-  .director-slide {
-    grid-template-columns: 1fr !important;
+  .director-card {
+    grid-template-columns: 1fr;
     grid-template-rows: 260px auto;
   }
 }
@@ -408,19 +435,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.55;
 }
 
-/* Retro swiper progress */
-.retro-progress {
-  display: flex;
-  gap: 6px;
-  margin-top: 20px;
-}
-.retro-progress-bar {
-  height: 2px;
-  flex: 1;
-  background: var(--border);
-  transition: background 0.4s;
-}
-.retro-progress-bar.active { background: var(--amber); }
+
 
 /* ---- FOOTER ---- */
 .footer {

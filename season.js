@@ -1,19 +1,19 @@
-// Season Page — GSAP + Swiper (Mobile-first)
+// Season Page — Pure CSS scroll, GSAP animations
+// No Swiper — zero touch event interception
+
 gsap.registerPlugin(ScrollTrigger);
 
 const isMobile = window.innerWidth < 768;
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ---- PAGE HERO ENTRANCE ----
-const heroTl = gsap.timeline({ delay: prefersReduced ? 0 : 0.35 });
-
 if (prefersReduced) {
-  gsap.set(['.page-hero-title','.page-hero-desc','.seasons-nav'], { opacity: 1, y: 0 });
+  gsap.set(['.page-hero-title', '.page-hero-desc', '.seasons-nav'], { opacity: 1, y: 0 });
 } else {
-  heroTl
-    .to('.page-hero-title', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' })
-    .to('.page-hero-desc',  { opacity: 1, duration: 0.7, ease: 'power2.out' }, '-=0.5')
-    .to('.seasons-nav',     { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.3');
+  gsap.timeline({ delay: 0.35 })
+    .to('.page-hero-title', { opacity: 1, y: 0, duration: 1,   ease: 'power3.out' })
+    .to('.page-hero-desc',  { opacity: 1,       duration: 0.7, ease: 'power2.out' }, '-=0.5')
+    .to('.seasons-nav',     { opacity: 1,       duration: 0.6, ease: 'power2.out' }, '-=0.3');
 }
 
 // ---- SEASON TITLES + DESCS ----
@@ -30,81 +30,53 @@ document.querySelectorAll('.season-desc').forEach(el => {
   });
 });
 
-// ---- SWIPER CONFIG ----
-const filmSwiperConfig = {
-  slidesPerView: 'auto',
-  spaceBetween: 3,
-  grabCursor: true,
-  keyboard: { enabled: true },
-  a11y: { enabled: true },
-  // Critical: allow vertical scroll to pass through on mobile
-  touchStartPreventDefault: false,
-  touchMoveStopPropagation: false,
-  passiveListeners: true,
-  threshold: 10, // require 10px horizontal before capturing touch
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  freeMode: {
-    enabled: isMobile,
-    momentum: true,
-    momentumRatio: 0.6,
-    momentumBounce: false,
-  },
-};
-
-new Swiper('.swiper1', filmSwiperConfig);
-new Swiper('.swiper2', filmSwiperConfig);
-new Swiper('.swiper3', filmSwiperConfig);
-new Swiper('.swiper4', filmSwiperConfig);
-
-// ---- DIRECTOR RETROSPECTIVE SWIPER ----
-const retroSwiper = new Swiper('.swiper5', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  grabCursor: true,
-  keyboard: { enabled: true },
-  touchStartPreventDefault: false,
-  touchMoveStopPropagation: false,
-  passiveListeners: true,
-  threshold: 10,
-  effect: 'fade',
-  fadeEffect: { crossFade: true },
-  speed: 600,
-  navigation: {
-    nextEl: '.retro-section .swiper-button-next',
-    prevEl: '.retro-section .swiper-button-prev',
-  },
-  on: {
-    slideChange: function () {
-      updateRetroProgress(this.activeIndex, this.slides.length);
-    },
-    init: function () {
-      buildRetroProgress(this.slides.length);
-    }
-  }
+// ---- FILM CARDS: stagger animate in on scroll ----
+document.querySelectorAll('.film-track').forEach(track => {
+  const cards = track.querySelectorAll('.film-card');
+  gsap.from(cards, {
+    scrollTrigger: { trigger: track, start: 'top 88%' },
+    opacity: 0, x: 30,
+    duration: 0.5, stagger: 0.08,
+    ease: 'power2.out',
+  });
 });
 
-function buildRetroProgress(total) {
-  const retro = document.querySelector('.retro-section');
-  if (!retro) return;
-  const wrap = document.createElement('div');
-  wrap.className = 'retro-progress';
-  for (let i = 0; i < total; i++) {
-    const bar = document.createElement('div');
-    bar.className = 'retro-progress-bar' + (i === 0 ? ' active' : '');
-    bar.addEventListener('click', () => retroSwiper.slideTo(i));
-    bar.style.cursor = 'pointer';
-    wrap.appendChild(bar);
-  }
-  retro.appendChild(wrap);
-}
+// ---- DIRECTOR TRACK: build nav buttons ----
+const directorTrack = document.querySelector('.director-track');
+if (directorTrack) {
+  const cards = directorTrack.querySelectorAll('.director-card');
+  const directors = ['Béla Tarr', 'Weerasethakul', 'Mungiu', 'N.B. Ceylan', 'Haneke', 'Wong Kar-wai', 'Herzog'];
 
-function updateRetroProgress(activeIdx, total) {
-  document.querySelectorAll('.retro-progress-bar').forEach((bar, i) => {
-    bar.classList.toggle('active', i === activeIdx);
+  // Build nav
+  const navWrap = document.createElement('div');
+  navWrap.className = 'director-nav';
+  directors.forEach((name, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'director-nav-btn' + (i === 0 ? ' active' : '');
+    btn.textContent = name;
+    btn.addEventListener('click', () => {
+      const card = cards[i];
+      if (!card) return;
+      directorTrack.scrollTo({ left: card.offsetLeft, behavior: 'smooth' });
+      document.querySelectorAll('.director-nav-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+    navWrap.appendChild(btn);
   });
+  directorTrack.after(navWrap);
+
+  // Update active nav on scroll
+  directorTrack.addEventListener('scroll', () => {
+    const center = directorTrack.scrollLeft + directorTrack.clientWidth / 2;
+    let closest = 0, minDist = Infinity;
+    cards.forEach((card, i) => {
+      const dist = Math.abs(card.offsetLeft + card.offsetWidth / 2 - center);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    document.querySelectorAll('.director-nav-btn').forEach((b, i) => {
+      b.classList.toggle('active', i === closest);
+    });
+  }, { passive: true });
 }
 
 // ---- NAV compact ----
@@ -116,35 +88,20 @@ ScrollTrigger.create({
   }
 });
 
-// ---- SEASONS NAV active on scroll ----
-const sections = document.querySelectorAll('.season-section');
-sections.forEach((section, i) => {
+// ---- SEASONS NAV: highlight active section ----
+document.querySelectorAll('.season-section').forEach((section, i) => {
   ScrollTrigger.create({
     trigger: section,
     start: 'top 55%',
     end: 'bottom 45%',
     onToggle: self => {
       if (!self.isActive) return;
-      document.querySelectorAll('.sn-item').forEach((l, j) => {
-        l.classList.toggle('active', j === i);
-      });
-      // Scroll the nav pill into view on mobile
+      const links = document.querySelectorAll('.sn-item');
+      links.forEach((l, j) => l.classList.toggle('active', j === i));
       if (isMobile) {
-        const pill = document.querySelectorAll('.sn-item')[i];
+        const pill = links[i];
         if (pill) pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       }
     }
   });
 });
-
-// ---- MOBILE: swipe gesture feedback on film slides ----
-if (isMobile) {
-  document.querySelectorAll('.film-slide').forEach(slide => {
-    slide.addEventListener('touchstart', () => {
-      slide.style.transform = 'scale(0.97)';
-    }, { passive: true });
-    slide.addEventListener('touchend', () => {
-      slide.style.transform = '';
-    }, { passive: true });
-  });
-}
