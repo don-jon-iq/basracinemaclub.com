@@ -1,1053 +1,645 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from basracinemaclub.com/Season.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Sep 2024 00:56:22 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basra Cinema Club</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Basra Cinema Club — Movie Screenings by Season">
+  <title>Screenings — Basra Cinema Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
+  <link rel="stylesheet" href="season.css">
 </head>
-
 <body>
-    <div class="container-season" id="main">
-        <div class="scroll-indecator" style="left: 95%">
-            <h3>scroll</h3>
-            <span class="scroll-icon">
-                <span class="scroll-icon__wheel-outer">
-                    <span class="scroll-icon__wheel-inner"></span>
-                </span>
-            </span>
-        </div>
-        <div class="headers">
-            <div class="right-side">
-                <a href="Season.html">Movie Screening</a>
-            </div>
-            <a class="center-click" href="index-2.html">
 
-            </a>
-            <div class="left-side">
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="Season.html" class="nav-link active">Movie Screening</a>
+    <a href="index.html" class="nav-logo" aria-label="Home">
+      <svg class="nav-logo-icon" viewBox="0 0 90.94 90.91" xmlns="http://www.w3.org/2000/svg">
+        <polygon fill="#fff" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
+        <rect fill="#fff" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
+        <polygon fill="#fff" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
+        <rect fill="#fff" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
+        <path fill="#fff" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
+      </svg>
+    </a>
+    <a href="index.html#join" class="nav-link">Join Club</a>
+  </nav>
 
-                <a>Join Club</a>
-            </div>
-        </div>
-        <nav class="navbar">
-            <div class="right-side">
-            </div>
-            <div class="center" id="center">
-                <div class="logo-bg">
-                    <svg id="logo-bg" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 3915.81 3915.81">
-                        <defs>
-                            <style>
-                                .cls-2 {
-                                    fill: #b73f01;
-                                }
-                            </style>
-                        </defs>
-                        <g id="Layer_1-2" data-name="Layer 1">
-                            <g>
-                                <path class="cls-2"
-                                    d="m1957.9,1766.52l-191.37,191.4,191.37,191.37,191.4-191.37-191.4-191.4Zm-140.06,191.4l140.06-140.07,140.08,140.07-140.08,140.06-140.06-140.06Z" />
-                                <path class="cls-2"
-                                    d="m1957.91,1909.38l-48.53,48.53,48.53,48.53,48.53-48.53-48.53-48.53Zm-22.87,48.53l22.87-22.87,22.87,22.87-22.87,22.87-22.87-22.87Z" />
-                                <path class="cls-2"
-                                    d="m1970.6,12.83l-12.83-12.83L0,1958.04l1957.77,1957.77,1945.21-1944.94,12.83-12.83L1970.6,12.83Zm-12.71,2248.97l-303.87-303.88,303.87-303.91,303.92,303.91-303.92,303.88Zm-337.05-322.02h-214.48l533.38-533.45v214.5l-318.9,318.94Zm.01,36.29l318.89,318.89v214.51l-533.41-533.4h214.53Zm355.18,318.91l318.76-318.73h214.52l-533.28,533.21v-214.48Zm319.14-355.02l-319.14-319.14v-214.47l533.61,533.61h-214.47Zm-940.12-.18h-210.07l794.76-794.87v210.1l-584.69,584.77Zm-.03,36.29l584.73,584.72v210.11l-794.83-794.83h210.1Zm621.02,584.7l584.6-584.52h210.1l-794.7,794.58v-210.06Zm584.93-620.81l-584.93-584.94v-210.05l794.99,794.98h-210.07Zm-1467.29-.18h-204.44L1939.74,889.13v204.47l-846.08,846.2Zm-.07,36.29l846.15,846.15v204.48L889.12,1976.08h204.48Zm882.43,846.08l846.01-845.9h204.48l-1050.49,1050.33v-204.44Zm846.31-882.19l-846.31-846.31v-204.43l1050.75,1050.74h-204.44Zm-1984.43-.18h-232.22L1939.74,605.55v232.25L837.9,1939.79Zm-.1,36.29l1101.94,1101.94v232.26L605.54,1976.08h232.26Zm1138.23,1101.83l1101.81-1101.65h232.27l-1334.07,1333.88v-232.23Zm1102.06-1137.94L1976.02,837.91v-232.22l1334.3,1334.28h-232.23Zm-2523.73-.18h-216.95L1939.74,337.25v216.97L554.36,1939.79Zm-.14,36.29l1385.51,1385.52v216.98L337.24,1976.08h216.99Zm1421.8,1385.38l1385.4-1385.19h216.97l-1602.37,1602.14v-216.95Zm1385.61-1421.48L1976.02,554.36v-216.93l1602.55,1602.54h-216.94ZM1939.74,285.93L286.1,1939.79H69.56L1939.74,69.37v216.56ZM285.92,1976.08l1653.81,1653.81v216.57L69.35,1976.08h216.57Zm1690.1,1653.64l1653.68-1653.46h216.57l-1870.25,1869.99v-216.53Zm1653.87-1689.75L1976.02,286.1V69.58l1870.4,1870.39h-216.53Z" />
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <svg id="logo" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.94 90.91">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: #fff;
-                            }
-                        </style>
-                    </defs>
-                    <g id="Layer_1-2" data-name="Layer 1">
-                        <g>
-                            <polygon id="dot" class="cls-1"
-                                points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45" />
-                            <rect id="dot-2" data-name="dot" class="cls-1" x="40.65" y="1.99" width="9.63" height="9.63"
-                                transform="translate(8.5 34.14) rotate(-45)" />
-                            <polygon id="dot-3" data-name="dot" class="cls-1"
-                                points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12" />
-                            <rect id="dot-4" data-name="dot" class="cls-1" x="2" y="40.65" width="9.63" height="9.63"
-                                transform="translate(-30.15 18.13) rotate(-45)" />
-                            <path id="hash" class="cls-1"
-                                d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z" />
-                        </g>
-                    </g>
-                </svg>
-                <svg id="logo-title" viewBox="0 0 473 70" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_12_4)">
-                        <path
-                            d="M271.62 59.7751C270.42 59.0528 268.823 58.3806 266.831 57.7543C265.951 58.6394 265.009 59.8127 264.001 61.2782C263.142 60.0048 261.013 58.8315 257.606 57.7543C255.527 59.9087 253.976 62.2511 252.946 64.773C255.432 65.8711 257.756 67.4034 259.922 69.3658C261.358 68.1801 262.536 66.8523 263.457 65.3868C265.599 66.5308 267.487 67.8544 269.113 69.3658C270.225 68.4807 271.308 67.3116 272.358 65.8544C273.408 64.3972 273.848 63.2281 273.678 62.3471C273.508 61.3534 272.819 60.4975 271.62 59.7751Z"
-                            fill="white" />
-                        <path
-                            d="M250.129 52.3848C252.884 54.9067 256.756 56.1677 261.748 56.1677C264.81 56.1677 268.101 55.5998 271.616 54.4683C275.13 53.3368 278.624 51.6917 282.093 49.5372L285.052 36.6313C285.114 34.6272 285.089 32.9821 284.969 31.7003C284.853 30.4184 284.508 29.2744 283.94 28.2723C283.371 27.2702 282.724 26.5145 281.994 26.0093C281.263 25.5041 280.093 25.0699 278.475 24.715C276.856 24.36 275.197 24.1179 273.491 23.9884C271.786 23.859 269.425 23.7504 266.404 23.6669C267.881 22.8277 269.848 22.0511 272.304 21.3371C274.757 20.6273 276.703 20.3142 278.139 20.3977L281.836 23.049L283.156 22.6607C283.222 19.8591 282.712 17.2369 281.629 14.8027C280.545 12.3685 279.072 10.5898 277.209 9.46667C273.309 10.5022 269.74 12.6107 266.507 15.7923C263.271 18.9739 261.055 22.3642 259.856 25.9634C259.876 27.1074 259.876 28.1429 259.856 29.0698C259.835 29.9967 259.926 30.8401 260.129 31.5917C260.333 32.3474 260.569 33.0155 260.835 33.5959C261.105 34.1804 261.532 34.694 262.121 35.1491C262.71 35.6 263.37 35.9883 264.096 36.314C264.827 36.6397 265.769 36.9194 266.926 37.1532C268.084 37.3912 269.362 37.5916 270.769 37.7503C272.172 37.9131 273.84 38.0468 275.769 38.1553C276.562 38.1971 277.815 38.2221 279.529 38.2221C273.636 39.9048 268.503 40.744 264.134 40.744C259.764 40.744 256.996 39.9048 255.262 38.2221C253.527 36.5395 252.66 34.0092 252.66 30.623C252.66 28.8569 252.971 26.1387 253.594 22.4728L251.087 21.5334L246.805 35.8255C246.27 38.1094 246 40.172 246 42.0008C246 46.4016 247.378 49.8587 250.129 52.3806V52.3848Z"
-                            fill="white" />
-                        <path
-                            d="M298.202 47.6291H312.344L316.556 33.6585V28.8068C316.514 27.1032 316.153 25.3538 315.481 23.55C314.805 21.7505 313.995 20.143 313.053 18.7317C312.112 17.3204 311.07 15.9676 309.937 14.6733C308.8 13.3789 307.783 12.3351 306.883 11.5376C305.983 10.7401 305.19 10.1138 304.505 9.6629H303.862L297.53 16.4854L309.584 28.8068H304.505C303.285 28.8068 302.302 28.8026 301.563 28.7901C300.825 28.7817 300.053 28.7525 299.248 28.7107C298.443 28.669 297.829 28.6105 297.397 28.5312C296.97 28.456 296.526 28.3475 296.065 28.2097C295.604 28.0677 295.277 27.9091 295.086 27.7253C294.895 27.5416 294.712 27.2995 294.538 26.9988C294.364 26.6982 294.264 26.3642 294.231 25.9968C294.198 25.6293 294.206 25.1993 294.247 24.7024L292.127 24.1847L289.106 33.7921C289.106 38.5561 289.803 42.0551 291.197 44.2889C292.592 46.5226 294.928 47.6375 298.206 47.6375L298.202 47.6291Z"
-                            fill="white" />
-                        <path
-                            d="M468.593 9.15771C469.643 7.70052 470.083 6.53143 469.913 5.64626C469.743 4.65671 469.054 3.79659 467.855 3.07426C466.655 2.35193 465.058 1.6797 463.066 1.05341C460.966 3.2538 459.402 5.59198 458.373 8.07212C460.858 9.17023 463.182 10.7026 465.348 12.665C466.46 11.7798 467.543 10.6107 468.593 9.15771Z"
-                            fill="white" />
-                        <path
-                            d="M471.809 20.7193C471.016 17.5294 469.946 14.995 468.593 13.1203H467.917L460.941 20.0722L465.892 28.8028H327.772L327.191 0.85733H326.548L318.834 6.15999L321.34 47.6251H468.784L472.996 33.6545V28.8028C472.996 26.6024 472.597 23.9093 471.805 20.7152L471.809 20.7193Z"
-                            fill="white" />
-                        <path
-                            d="M129.945 19.1251C130.962 17.6888 131.385 16.5406 131.219 15.6763C131.049 14.7076 130.385 13.8767 129.219 13.192C128.053 12.5072 126.488 11.8475 124.517 11.2129C122.484 13.3214 120.961 15.6137 119.957 18.0813C122.388 19.1585 124.667 20.6575 126.783 22.5781C127.874 21.7138 128.928 20.5614 129.945 19.1293V19.1251Z"
-                            fill="white" />
-                        <path
-                            d="M153.602 56.3648C152.436 55.6801 150.867 55.0204 148.9 54.3857C147.979 55.3127 147.045 56.465 146.099 57.8345C145.261 56.5903 143.186 55.4379 139.871 54.3857C137.817 56.5402 136.285 58.8283 135.277 61.2541C137.75 62.3522 140.037 63.8512 142.136 65.751C143.543 64.5902 144.697 63.2917 145.597 61.8596C147.693 62.9786 149.539 64.2771 151.133 65.751C152.224 64.8867 153.282 63.7343 154.311 62.3021C155.34 60.8658 155.768 59.7176 155.602 58.8533C155.436 57.8847 154.768 57.0538 153.606 56.369L153.602 56.3648Z"
-                            fill="white" />
-                        <path
-                            d="M210.468 11.7473C210.468 10.5657 210.646 9.12941 211.003 7.44258L210.344 7L201.534 14.7243C201.177 16.265 200.999 17.5009 200.999 18.4279C200.999 20.5781 201.563 22.3944 202.696 23.8725L203.704 34.4152H197.915C196.575 34.4152 195.405 34.2482 194.409 33.9099C193.413 33.5717 192.625 33.1333 192.048 32.5989C191.471 32.0603 191.01 31.3922 190.662 30.5864C190.318 29.7847 190.085 29.0039 189.969 28.244C189.853 27.4841 189.795 26.6282 189.795 25.6804C189.795 25.196 189.815 24.8453 189.857 24.6366L187.276 24.1313L184.446 34.4193H178.782L180.072 28.4069L177.367 27.6804C177.093 28.649 176.715 29.5175 176.234 30.2774C175.752 31.0373 175.254 31.6595 174.74 32.1438C174.225 32.6281 173.624 33.0331 172.931 33.363C172.238 33.6887 171.611 33.9308 171.043 34.0895C170.474 34.2481 169.823 34.3651 169.076 34.436C168.333 34.5112 167.744 34.5488 167.312 34.5488C166.881 34.5488 166.358 34.5363 165.739 34.5154C165.121 34.4945 164.735 34.482 164.59 34.482L166.129 29.3839L163.486 28.148L159.303 34.4152H154.93C153.589 34.4152 152.419 34.2482 151.423 33.9099C150.427 33.5717 149.639 33.1333 149.062 32.5989C148.485 32.0603 148.025 31.3922 147.676 30.5864C147.332 29.7847 147.099 29.0039 146.983 28.244C146.867 27.4841 146.809 26.6282 146.809 25.6804C146.809 25.196 146.83 24.8453 146.871 24.6366L144.29 24.1313L141.46 34.4193H136.049C134.709 34.4193 133.538 34.2523 132.543 33.9141C131.547 33.5759 130.758 33.1375 130.181 32.6031C129.605 32.0645 129.144 31.3964 128.795 30.5906C128.451 29.7889 128.219 29.0081 128.102 28.2482C127.986 27.4883 127.928 26.6324 127.928 25.6846C127.928 25.2002 127.949 24.8495 127.99 24.6407L125.409 24.1355L122.579 34.4235H46.3718L40.8363 21.6011C38.0685 21.8767 35.0019 22.4153 31.6366 23.2169C28.2713 24.0186 25.4537 24.862 23.188 25.7472C22.1381 27.9852 21.0053 30.8745 19.7895 34.4193H8.74737L8.17887 7.07098H7.54813L0 12.2567L2.45242 52.8367H16.6731L18.279 48.8159L35.1721 54.4484L38.9772 44.4151C39.0395 44.5194 39.1349 44.6906 39.2594 44.9203C39.72 45.7428 40.0561 46.3399 40.2678 46.7073C40.4753 47.0789 40.8238 47.605 41.3052 48.2898C41.7865 48.9745 42.2056 49.4839 42.5625 49.8096C42.9194 50.1352 43.4049 50.5319 44.0232 50.9954C44.6415 51.4588 45.2763 51.797 45.9278 52.01C46.5793 52.2229 47.347 52.4108 48.2392 52.582C49.1189 52.749 50.0816 52.8325 51.1148 52.8325H62.1279H123.098L125.111 46.2146C126.409 48.2188 128.024 49.8221 129.953 51.0246C131.883 52.2271 133.916 52.8283 136.057 52.8283H141.97L143.983 46.2104C145.282 48.2146 146.896 49.8179 148.826 51.0204C150.755 52.2229 152.788 52.8242 154.93 52.8242H158.926L160.469 47.9474C162.922 51.1958 166.939 52.8242 172.52 52.8242H172.96L174.375 48.2981C175.317 49.6718 176.479 50.7657 177.852 51.5924C179.226 52.415 180.753 52.8283 182.429 52.8283H184.948L186.96 46.2104C188.259 48.2146 189.874 49.8179 191.803 51.0204C193.733 52.2229 195.766 52.8242 197.907 52.8242H206.812L210.871 39.15L210.526 27.6595L214.207 18.9205V18.002C211.709 17.0542 210.464 14.9623 210.464 11.7348L210.468 11.7473ZM25.8935 34.2857L33.8234 32.1647L36.3381 37.1333L25.8935 34.2857Z"
-                            fill="white" />
-                        <path
-                            d="M225.581 7.06262L218.033 12.2567L220.614 52.8367H221.24L227 43.9432L226.212 7.06262H225.581Z"
-                            fill="white" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_12_4">
-                            <rect width="473" height="70" fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </div>
-            <div class="left-side">
-            </div>
-        </nav>
-        <section class="season-1 panel">
-            <div class="season-1-title">
-                <span class="left-bar"></span><img src="logo.svg" width="40">
-                <h1> Season One </h1> <img src="logo.svg" width="40">
-                <h1> American Cinema </h1> <img src="logo.svg" width="40"><span class="right-bar"></span>
-            </div>
-            <div class="season-wrapper">
-                <div class="season-info">
-                    <p class="season-descrabtion">American cinema has played a pivotal role in shaping the global film industry, captivating audiences worldwide with its innovation, diversity, and influential storytelling. From classic Hollywood masterpieces to groundbreaking independent films, American cinema has consistently pushed boundaries and set cinematic trends, leaving an indelible mark on the art form.</p>
-                    <p class="season-descrabtion">In Basra Cinema club we have curated this list according to artistic
-                        and cultural importance to the Iraqi viewer :</p>
-                </div>
-            <div class="movies">
-                <div class="swiper1">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide slide2">
-
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> citizen kane </h1>
-                                    <h2 class="slider-year"> 1940s</h2>
-                                </div>
-                                <h2 class="slider-date"> By Orson Welles.</h2>
-                                <p class="slider-descrabtion">Following the death of publishing tycoon Charles Foster
-                                    Kane,
-                                    reporters scramble to uncover the meaning of his final utterance:'Rosebud.</p>
-                            </div>
-                            <img src="img/season-1-img/citzen.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> vertigo</h1>
-                                    <h2 class="slider-year"> 1950s</h2>
-                                </div>
-                                <h2 class="slider-date">by Alfred Hitchcock</h2>
-                                <p class="slider-descrabtion">A former San Francisco police detective juggles wrestling
-                                    with
-                                    his personal demons and becoming obsessed with the hauntingly beautiful woman he has
-                                    been hired to trail.</p>
-                            </div>
-                            <img src="img/season-1-img/vertgo.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> 2001 a space odyssey </h1>
-                                    <h2 class="slider-year"> 1960s</h2>
-                                </div>
-                                <h2 class="slider-date"> By Stanley Kubrick</h2>
-                                <p class="slider-descrabtion">After uncovering a mysterious artifact buried beneath the
-                                    Lunar surface, a spacecraft is sent to Jupiter to find its origins - a spacecraft
-                                    manned
-                                    by two men and the supercomputer H.A.L.</p>
-                            </div>
-                            <img src="img/season-1-img/download%20(2).jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> apocalypse now</h1>
-                                    <h2 class="slider-year"> 1970s</h2>
-                                </div>
-                                <h2 class="slider-date">By Francis Ford Coppola</h2>
-                                <p class="slider-descrabtion">A U.S. Army officer serving in Vietnam is tasked with
-                                    assassinating a renegade Special Forces Colonel who sees himself as a god.</p>
-                            </div>
-                            <img src="img/season-1-img/apocalypse%20now.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> taxi driver</h1>
-                                    <h2 class="slider-year"> 1970s</h2>
-                                </div>
-                                <h2 class="slider-date">By Martin Scorsese</h2>
-                                <p class="slider-descrabtion">A mentally unstable veteran works as a nighttime taxi
-                                    driver
-                                    in New York City, where the perceived decadence and sleaze fuels his urge for
-                                    violent
-                                    action.</p>
-                            </div>
-                            <img src="img/season-1-img/images.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> blade runner</h1>
-                                    <h2 class="slider-year"> 1980s</h2>
-                                </div>
-                                <h2 class="slider-date">By Ridley Scott</h2>
-                                <p class="slider-descrabtion">A blade runner must pursue and terminate four replicants
-                                    who
-                                    stole a ship in space and have returned to Earth to find their creator.</p>
-                            </div>
-                            <img src="img/season-1-img/blade%20runner.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> love streams</h1>
-                                    <h2 class="slider-year"> 1980s</h2>
-                                </div>
-                                <h2 class="slider-date"> By John Cassavetes</h2>
-                                <p class="slider-descrabtion">Two closely bound, emotionally wounded souls reunite after
-                                    years apart.</p>
-                            </div>
-                            <img src="img/season-1-img/love%20streams.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title">the thin red line</h1>
-                                    <h2 class="slider-year"> 1990s</h2>
-                                </div>
-                                <h2 class="slider-date">By Terrence Malick</h2>
-                                <p class="slider-descrabtion">Adaptation of James Jones' autobiographical 1962 novel,
-                                    focusing on the conflict at Guadalcanal during the second World War.</p>
-                            </div>
-                            <img src="img/season-1-img/the%20thin%20red%20line.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title"> dead man</h1>
-                                    <h2 class="slider-year"> 1990s</h2>
-                                </div>
-                                <h2 class="slider-date">By Jim Jarmusch</h2>
-                                <p class="slider-descrabtion">On the run after murdering a man, accountant William Blake
-                                    encounters a strange aboriginal American man named Nobody who prepares him for his
-                                    journey into the spiritual world.</p>
-                            </div>
-                            <img src="img/season-1-img/dead%20man.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-
-                                    <h1 class="slider-title">there will be blood</h1>
-                                    <h2 class="slider-year">2007s</h2>
-                                </div>
-                                <h2 class="slider-date">By Paul Thomas Anderson</h2>
-                                <p class="slider-descrabtion">A story of family, religion, hatred, oil and madness,
-                                    focusing
-                                    on a turn-of-the-century prospector in the early days of the business.</p>
-                            </div>
-                            <img src="img/season-1-img/there%20will%20be%20blood.jpg" class="slider-img" />
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <div class="slider-info">
-                                <div class="slider-titles">
-                                    <h1 class="slider-title">the tree of life</h1>
-                                    <h2 class="slider-year"> 2000s</h2>
-                                </div>
-                                <h2 class="slider-date">By The Tree Of Life </h2>
-                                <p class="slider-descrabtion">The story of a family in Waco, Texas in 1956. The eldest
-                                    son
-                                    witnesses the loss of innocence and struggles with his parents' conflicting
-                                    teachings.
-                                </p>
-                            </div>
-                            <img src="img/season-1-img/the%20tree%20of%20life.jpg" class="slider-img" />
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-prev sw-b-p"></div>
-                    <div class="swiper-button-next sw-b-n"></div>
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <section class="season-2 panel">
-            <div class="season-2-title">
-                <span class="left-bar"></span><img src="logo.svg" width="40">
-                <h1>Season Two </h1> <img src="logo.svg" width="40">
-                <h1> Iranian Cinema </h1> <img src="logo.svg" width="40"><span class="right-bar"></span>
-            </div>
-            <div class="season-wrapper">
-                <div class="season-info">
-                    <p class="season-descrabtion">Iranian cinema holds significant importance in the global film
-                        landscape, captivating audiences with its unique storytelling and artistic expression.</p>
-                    <p class="season-descrabtion">In Basra Cinema club we have curated this list according to artistic
-                        and cultural importance to the Iraqi viewer :</p>
-                </div>
-                <div class="movies2">
-                    <div class="swiper2">
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide slide2">
-
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-                                        <h1 class="slider-title"> The Cow </h1>
-                                        <h2 class="slider-year"> 1969 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Dariush Mehrjui </h2>
-                                    <p class="slider-descrabtion"> is a seminal film exploring loss and identity through
-                                        the
-                                        psychological transformation of a villager who assumes the persona of his
-                                        cherished
-                                        cow,
-                                        delivering a haunting and thought-provoking cinematic masterpiece.</p>
-
-                                </div>
-                                <img src="img/season-2-img/the%20cow.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-                                        <h1 class="slider-title"> the cyclist </h1>
-                                        <h2 class="slider-year"> 1989 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Mohsen Makhmalbaf</h2>
-                                    <p class="slider-descrabtion">is a visually captivating Iranian film that poetically
-                                        portrays the relentless struggle of a cyclist trying to support his family in a
-                                        war-torn
-                                        landscape, offering a profound reflection on the human spirit and resilience in
-                                        adversity.</p>
-
-                                </div>
-                                <img src="img/season-2-img/the%20cyclist.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> A Moment of Innocence </h1>
-                                        <h2 class="slider-year"> 1996 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Mohsen Makhmalbaf</h2>
-                                    <p class="slider-descrabtion">is a captivating Iranian film that blurs the
-                                        boundaries
-                                        between reality and fiction. Inspired by a true event, the film brings together
-                                        the
-                                        actual participants of a violent incident, including Makhmalbaf himself, to
-                                        reenact
-                                        and
-                                        reinterpret the event, resulting in a thought-provoking exploration of memory,
-                                        perception, and the power of cinema.</p>
-                                </div>
-                                <img src="img/season-2-img/A%20moment%20of%20inocence.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> The Circle </h1>
-                                        <h2 class="slider-year"> 2000 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Jafar Panahi</h2>
-                                    <p class="slider-descrabtion">is gripping film that exposes the harsh realities
-                                        faced by
-                                        women in a patriarchal society, offering a powerful and thought-provoking
-                                        exploration of
-                                        gender inequality.</p>
-                                </div>
-                                <img src="img/season-2-img/the%20Circle.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Crimson Gold </h1>
-                                        <h2 class="slider-year"> 2003 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Jafar Panahi</h2>
-                                    <p class="slider-descrabtion">is a compelling film that explores the impact of
-                                        socio-economic disparities and poverty in Tehran, offering a thought-provoking
-                                        commentary on social injustice and the human experience.</p>
-                                </div>
-                                <img src="img/season-2-img/crimson%20gold.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> About Elly </h1>
-                                        <h2 class="slider-year"> 2009 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Asghar Farhadi</h2>
-                                    <p class="slider-descrabtion">is a gripping drama that explores the consequences of
-                                        secrets
-                                        and lies within a group of friends during a weekend trip, delving into the
-                                        complexities
-                                        of human relationships and the fragility of trust.</p>
-                                </div>
-                                <img src="img/season-2-img/about%20elly.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> There is No Evil </h1>
-                                        <h2 class="slider-year"> 2020 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Mohammad Rasoulof</h2>
-                                    <p class="slider-descrabtion">is a thought-provoking drama that examines the moral
-                                        dilemmas
-                                        faced by individuals in a repressive society. The film is an anthology of
-                                        interconnected
-                                        stories, each exploring the themes of personal responsibility, choice, and the
-                                        repercussions of obedience and defiance in the face of an oppressive regime.
-                                        Through
-                                        its
-                                        powerful storytelling and compelling performances, "There is No Evil" challenges
-                                        viewers
-                                        to question the nature of power, authority, and individual agency in the pursuit
-                                        of
-                                        justice and freedom.</p>
-
-                                </div>
-                                <img src="img/season-2-img/there%20is%20no%20evil.jpg" class="slider-img" />
-                            </div>
-
-                        </div>
-                        <div class="swiper-button-prev sw-b-p"></div>
-                        <div class="swiper-button-next sw-b-n"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="season-3 panel">
-            <h1 class="season-title"></h1>
-            <div class="season-3-title">
-                <span class="left-bar"></span><img src="logo.svg" width="40">
-                <h1>season three </h1> <img src="logo.svg" width="40">
-                <h1> Japanese Cinema </h1> <img src="logo.svg" width="40"><span class="right-bar"></span>
-            </div>
-            <div class="season-wrapper">
-                <div class="season-info">
-                    <p class="season-descrabtion">Welcome to Basra Cinema Club's upcoming season, where we embark on a
-                        captivating journey into the world of Japanese cinema. Immerse yourself in the rich tapestry of
-                        storytelling, intricate visuals, and profound emotions as we present a carefully curated
-                        selection of Japanese masterpieces.</p>
-                    <p class="season-descrabtion">In Basra Cinema club we have curated this list according to artistic
-                        and cultural importance to the Iraqi viewer :</p>
-                </div>
-                <div class="movies3">
-                    <div class="swiper3">
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide slide2">
-
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-                                        <h1 class="slider-title"> Rashomon </h1>
-                                        <h2 class="slider-year"> 1950 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Akira Kurosawa </h2>
-                                    <p class="slider-descrabtion">In this groundbreaking film, Kurosawa masterfully
-                                        explores the concept of multiple perspectives by presenting a crime from
-                                        different viewpoints, challenging the audience's perception of truth and human
-                                        nature.</p>
-
-                                </div>
-                                <img src="img/season-3-img/Rashomon.png" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-                                        <h1 class="slider-title"> Tokyo Story </h1>
-                                        <h2 class="slider-year"> 1953 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Yasujirō Ozu</h2>
-                                    <p class="slider-descrabtion">
-                                        Ozu's poignant masterpiece depicts the generational gap and changing societal
-                                        values as an elderly couple visits their busy adult children in Tokyo. The film
-                                        serves as a profound reflection on family dynamics, social changes, and the
-                                        universal themes of love and loss.
-                                    </p>
-
-                                </div>
-                                <img src="img/season-3-img/Tokyo%20Story.webp" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Harakiri </h1>
-                                        <h2 class="slider-year"> 1962 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Masaki Kobayashi</h2>
-                                    <p class="slider-descrabtion">With its searing critique of the samurai code and
-                                        feudal hierarchy, "Harakiri" is a powerful and visually striking film. It delves
-                                        into themes of honor, duty, and the price of maintaining one's integrity in the
-                                        face of oppressive systems.</p>
-                                </div>
-                                <img src="img/season-3-img/Harakiri.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Ugetsu </h1>
-                                        <h2 class="slider-year"> 1953 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Kenji Mizoguchi</h2>
-                                    <p class="slider-descrabtion">Mizoguchi's hauntingly beautiful film intertwines
-                                        reality and the supernatural to explore the price of ambition and the
-                                        destructive nature of desire. Through its mesmerizing cinematography and
-                                        evocative storytelling, "Ugetsu" offers a profound meditation on the human
-                                        condition.</p>
-                                </div>
-                                <img src="img/season-3-img/Ugetsu.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Sansho the Bailiff </h1>
-                                        <h2 class="slider-year"> 1954 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Kenji Mizoguchi</h2>
-                                    <p class="slider-descrabtion">This emotionally resonant masterpiece tells the story
-                                        of a family torn apart by social injustice and their enduring struggle for
-                                        reunion. Mizoguchi's film is a powerful condemnation of feudalistic oppression
-                                        and an ode to the resilience of the human spirit.</p>
-                                </div>
-                                <img src="img/season-3-img/Sansho%20the%20Bailiff.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Seven Samurai </h1>
-                                        <h2 class="slider-year"> 1954 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Akira Kurosawa</h2>
-                                    <p class="slider-descrabtion">Regarded as one of the greatest films ever made,
-                                        "Seven Samurai" follows a group of skilled samurai who defend a village from
-                                        bandits. Kurosawa's epic showcases his mastery of storytelling, character
-                                        development, and dynamic action sequences, cementing its status as a timeless
-                                        classic and influencing generations of filmmakers worldwide.</p>
-                                </div>
-                                <img src="img/season-3-img/Seven_Samurai_poster2.webp" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Ran </h1>
-                                        <h2 class="slider-year"> 1985 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Akira Kurosawa</h2>
-                                    <p class="slider-descrabtion"> Kurosawa's visually stunning and emotionally gripping
-                                        masterpiece, "Ran," presents a compelling adaptation of Shakespeare's "King
-                                        Lear" set in feudal Japan. Through breathtaking cinematography, powerful
-                                        performances, and a thought-provoking exploration of human nature, the film
-                                        delves into themes of power, betrayal, and the destructive consequences of
-                                        unchecked ambition, solidifying its status as an epic and profound cinematic
-                                        achievement</p>
-
-                                </div>
-                                <img src="img/season-3-img/ran.jpg" class="slider-img" />
-                            </div>
-
-                        </div>
-                        <div class="swiper-button-prev sw-b-p"></div>
-                        <div class="swiper-button-next sw-b-n"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="season-4 panel">
-            <div class="season-4-title">
-                <span class="left-bar"></span><img src="logo.svg" width="40">
-                <h1>season Four </h1> <img src="logo.svg" width="40">
-                <h1> the Palestinian case cinema </h1> <img src="logo.svg" width="40"><span class="right-bar"></span>
-            </div>
-            <div class="season-wrapper">
-                <div class="season-info">
-                    <p class="season-descrabtion">These films offer a diverse and compelling exploration of the
-                        Israeli-Palestinian conflict, delving into the personal, psychological, and societal
-                        complexities experienced by individuals on both sides of the divide.</p>
-
-                </div>
-                <div class="movies4">
-                    <div class="swiper4">
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide slide2">
-
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-                                        <h1 class="slider-title"> Paradise Now </h1>
-                                        <h2 class="slider-year"> 2005 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Hany Abu-Assad </h2>
-                                    <p class="slider-descrabtion">This gripping film delves into the lives of two
-                                        Palestinian friends who are recruited as suicide bombers. "Paradise Now" offers
-                                        a thought-provoking exploration of the psychological and moral complexities
-                                        surrounding the Israeli-Palestinian conflict, challenging viewers to confront
-                                        the human side of those involved.</p>
-
-                                </div>
-                                <img src="img/season-4-img/Paradise%20Now.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-                                        <h1 class="slider-title"> Waltz with Bashir </h1>
-                                        <h2 class="slider-year"> 2008 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Ari Folman</h2>
-                                    <p class="slider-descrabtion">
-                                        Through innovative animation and a deeply personal narrative, "Waltz with
-                                        Bashir" follows the director's journey to recover his repressed memories from
-                                        the 1982 Lebanon War. This groundbreaking film confronts the trauma of war,
-                                        collective memory, and the search for truth, providing a unique perspective on
-                                        the Israeli-Palestinian conflict.
-                                    </p>
-
-                                </div>
-                                <img src="img/season-4-img/Waltz%20with%20Bashir.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> The Time That Remains </h1>
-                                        <h2 class="slider-year"> 2009 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Elia Suleiman</h2>
-                                    <p class="slider-descrabtion"> Suleiman's semi-autobiographical film recounts the
-                                        experiences of Palestinians from 1948 to the present day, capturing moments of
-                                        absurdity, resilience, and everyday life. By blending humor and melancholy, "The
-                                        Time That Remains" offers a poignant reflection on the Palestinian struggle for
-                                        identity, dignity, and survival.</p>
-                                </div>
-                                <img src="img/season-4-img/The%20Time%20That%20Remains.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Omar </h1>
-                                        <h2 class="slider-year"> 2013 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Hany Abu-Assad</h2>
-                                    <p class="slider-descrabtion">Set against the backdrop of the Israeli-occupied West
-                                        Bank, "Omar" is a gripping thriller that follows a young Palestinian baker who
-                                        becomes entangled in a web of surveillance, betrayal, and resistance. The film
-                                        highlights the complexities of living under occupation and the choices
-                                        individuals face in their quest for freedom and justice.</p>
-                                </div>
-                                <img src="img/season-4-img/Omar.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title">Foxtrot </h1>
-                                        <h2 class="slider-year"> 2017 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Samuel Maoz</h2>
-                                    <p class="slider-descrabtion"> This powerful drama weaves together three
-                                        interconnected narratives, exploring the impact of war and grief on an Israeli
-                                        family. "Foxtrot" delves into themes of loss, bureaucracy, and the cyclical
-                                        nature of conflict, offering a searing critique of the human cost of war and the
-                                        systemic challenges faced by both Israelis and Palestinians.</p>
-                                </div>
-                                <img src="img/season-4-img/Foxtrot.jpg" class="slider-img" />
-                            </div>
-                            <div class="swiper-slide slide2">
-                                <div class="slider-info">
-                                    <div class="slider-titles">
-
-                                        <h1 class="slider-title"> Lebanon </h1>
-                                        <h2 class="slider-year"> 2009 </h2>
-                                    </div>
-                                    <h2 class="slider-date">By Samuel Maoz</h2>
-                                    <p class="slider-descrabtion">Set entirely within the confines of an Israeli tank
-                                        during the 1982 Lebanon War, this intense and claustrophobic film provides a
-                                        harrowing portrayal of the realities of war. "Lebanon" serves as a stark
-                                        reminder of the brutality and dehumanization experienced by soldiers and
-                                        civilians alike, exploring the moral dilemmas and psychological toll of armed
-                                        conflict.</p>
-                                </div>
-                                <img src="img/season-4-img/lebanon.jpg" class="slider-img" />
-                            </div>
-
-
-                        </div>
-                        <div class="swiper-button-prev sw-b-p"></div>
-                        <div class="swiper-button-next sw-b-n"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="season-5 panel">
-            <div class="season-5-title">
-                <span class="left-bar"></span><img src="logo.svg" width="40">
-                <h1>Director's retrospective </h1> <img src="logo.svg" width="40"><span class="right-bar"></span>
-            </div>
-            <div class="director">
-                <div class="swiper5">
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/Bela%20Tarr.jpg" alt="" class="director-img">
-                                <h1 class="director-name">Bela Tarr</h1>
-                                <p class="director-desc">Join us for a mesmerizing Bela Tarr Retrospective as we explore
-                                    the remarkable works of this visionary filmmaker. </p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/Werckmeister%20Harmonies.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Werckmeister Harmonies </h1>
-                                            <h2 class="director-movie-year"> 2000 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">takes viewers on a haunting journey through a
-                                            Hungarian village, delving into themes of alienation, power, and the human
-                                            condition</p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/The%20Turin%20Horse.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> The Turin Horse </h1>
-                                            <h2 class="director-movie-year"> 2011 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">offers a profound and meditative experience,
-                                            depicting the lives of a father and daughter as they face the relentless
-                                            hardship of existence, enveloping audiences in Tarr's signature atmospheric
-                                            storytelling and stunning long takes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/Apichatpong%20%20Weerasethakul%20.png" alt="" class="director-img">
-                                <h1 class="director-name">Apichatpong  Weerasethakul </h1>
-                                <p class="director-desc">Immerse yourself in the captivating world of Apichatpong Weerasethakul with our retrospective program featuring his remarkable films.  </p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/%20Uncle%20Boonmee%20Who%20Can%20Recall%20His%20Past%20Lives.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Uncle Boonmee </h1>
-                                            <h2 class="director-movie-year"> 2010 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">s a mesmerizing exploration of memory, reincarnation, and the spiritual connections between humans and nature. Through dreamlike sequences and poetic storytelling, Weerasethakul invites audiences into a transcendent cinematic experience that challenges conventional narratives and embraces the mystical realms of existence.</p>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/Cristian%20Mungiu.webp" alt="" class="director-img">
-                                <h1 class="director-name">  Cristian Mungiu</h1>
-                                <p class="director-desc">Embark on a thought-provoking journey with our Cristian Mungiu Retrospective, showcasing the exceptional works of this acclaimed filmmaker.  </p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/4%20Months%2c%203%20Weeks%20and%202%20Days.png" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> 4 Months, 3 Weeks and 2 Days" </h1>
-                                            <h2 class="director-movie-year"> 2007 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">offers a harrowing and intimate portrayal of two women navigating the challenges of illegal abortion in communist Romania, while "The Death of Mr. Lazarescu" (2005) presents a darkly humorous and poignant examination of the Romanian healthcare system through the eyes of a dying man. </p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/Beyond%20the%20Hills.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Beyond the Hills </h1>
-                                            <h2 class="director-movie-year"> 2012 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">delves into the complexities of faith, friendship, and institutional power, delivering a haunting and deeply affecting exploration of a religious community. Mungiu's films captivate audiences with their raw realism, social commentary, and masterful storytelling.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/Nuri%20Bilge%20Ceylan.webp" alt="" class="director-img">
-                                <h1 class="director-name">Nuri Bilge Ceylan</h1>
-                                <p class="director-desc">A  captivating journey through the works of Nuri Bilge Ceylan in our Director's Retrospective. </p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/Once%20Upon%20a%20Time%20in%20Anatolia.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Once Upon a Time in Anatolia </h1>
-                                            <h2 class="director-movie-year"> 2011 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">offers a mesmerizing and contemplative exploration of a night-long investigation in the Turkish countryside, delving into themes of truth, identity, and the human condition. "Three Monkeys" (2008) presents a gripping tale of a family's moral dilemma and the consequences of their actions, showcasing Ceylan's masterful storytelling and atmospheric cinematography. </p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/The%20Wild%20Pear%20Tree.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> The Wild Pear Tree </h1>
-                                            <h2 class="director-movie-year"> 2018 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">takes audiences on a poetic and introspective journey as a young writer confronts his ambitions, family dynamics, and the search for meaning in life. Ceylan's films are marked by their exquisite visuals, rich character development, and profound philosophical reflections, creating a cinematic experience that lingers long after the credits roll.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/Michael%20Haneke.jpg" alt="" class="director-img">
-                                <h1 class="director-name">Michael Haneke</h1>
-                                <p class="director-desc">Indulge in the captivating works of Michael Haneke in our Director's Retrospective, as we delve into his thought-provoking films.</p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/The%20White%20Ribbon.png" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> The White Ribbon </h1>
-                                            <h2 class="director-movie-year"> 2009 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">presents a haunting and unsettling portrait of a rural German village on the eve of World War I, exploring themes of power, repression, and the origins of evil. </p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/Amour.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Amour</h1>
-                                            <h2 class="director-movie-year"> 2012 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">offers a tender and emotionally resonant portrayal of an elderly couple facing the challenges of aging and mortality, delving into the complexities of love, compassion, and human fragility. Haneke's films are marked by their meticulous craftsmanship, unflinching examinations of human nature, and their ability to provoke profound introspection and discussion.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/theodoros.jpg" alt="" class="director-img">
-                                <h1 class="director-name">Theodoros Angelopoulos</h1>
-                                <p class="director-desc">Embark on a mesmerizing journey through the works of Theodoros Angelopoulos in our Theodoros Angelopoulos Retrospective. </p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/Eternity%20and%20a%20Day.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Eternity and a Day</h1>
-                                            <h2 class="director-movie-year"> 1998 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">takes viewers on a poetic exploration of life, memory, and the passage of time as a dying poet reflects on his past and contemplates his final moments.  </p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/Ulysses%27%20Gaze.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Ulysses' Gaze </h1>
-                                            <h2 class="director-movie-year"> 1995 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">weaves a captivating narrative around a filmmaker's search for three lost reels of film, delving into themes of history, identity, and the power of art.</p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-3">
-                                    <img src="img/season-5-img/The%20Suspended%20Step%20of%20the%20Stork.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> The Suspended Step of the Stork </h1>
-                                            <h2 class="director-movie-year"> 1991 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">offers a poignant reflection on the complexities of migration, borders, and human connection through the story of a journalist investigating the disappearance of a refugee. Angelopoulos' films captivate with their sweeping visuals, contemplative storytelling, and profound exploration of human experiences and the sociopolitical landscape.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/satyajitray.jpg" alt="" class="director-img">
-                                <h1 class="director-name">Satyajit Ray</h1>
-                                <p class="director-desc">Celebrate the incredible legacy of Satyajit Ray with our Director's Retrospective, as we showcase his remarkable films.</p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/Pather%20Panchali.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Pather Panchali </h1>
-                                            <h2 class="director-movie-year"> 1955 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">transports audiences to the enchanting world of rural Bengal, following the journey of a young boy and his family, capturing the beauty of ordinary life with profound sensitivity and authenticity. </p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/Aparajito.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Aparajito </h1>
-                                            <h2 class="director-movie-year"> 1956 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">continues the poignant coming-of-age story, tracing the protagonist's pursuit of education and the conflicts that arise between personal aspirations and familial obligations. </p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-3">
-                                    <img src="img/season-5-img/The%20World%20of%20Apu.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> The World of Apu </h1>
-                                            <h2 class="director-movie-year"> 1959 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">concludes the iconic Apu Trilogy with a deeply introspective exploration of love, loss, and self-discovery. Ray's films are revered for their lyrical storytelling, humanistic themes, and stunning cinematography, establishing him as one of India's most influential and revered filmmakers.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/wong.jpg" alt="" class="director-img">
-                                <h1 class="director-name">Wong Kar-wai</h1>
-                                <p class="director-desc">Immerse yourself in the mesmerizing world of Wong Kar-wai with our Director's Retrospective. </p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/%20In%20the%20Mood%20for%20Love.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> In the Mood for Love </h1>
-                                            <h2 class="director-movie-year"> 2000 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">presents a visually stunning and emotionally resonant tale of unrequited love and longing, set against the backdrop of 1960s Hong Kong.</p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/Chungking%20Express.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Chungking Express </h1>
-                                            <h2 class="director-movie-year"> 1994 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">weaves together two distinct love stories in the bustling streets of Hong Kong, capturing the essence of urban loneliness and fleeting connections. Wong Kar-wai's films are celebrated for their exquisite cinematography, poetic storytelling, and exploration of themes such as memory, desire, and the complexities of human relationships.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide director-slider">
-                            <div class="director-info">
-                                <img src="img/season-5-img/Werner%20Herzog.webp" alt="" class="director-img">
-                                <h1 class="director-name">Werner Herzog</h1>
-                                <p class="director-desc"> a captivating journey through the visionary films of Werner Herzog in our Director's Retrospective.</p>
-                            </div>
-                            <div class="director-movies">
-                                <div class="director-movie-1">
-                                    <img src="img/season-5-img/Aguirre%2c%20the%20Wrath%20of%20God.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Aguirre, the Wrath of God </h1>
-                                            <h2 class="director-movie-year"> 1972 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">immerses viewers in a mesmerizing tale of obsession and power as a Spanish conquistador's quest for El Dorado leads to madness and chaos in the heart of the Amazon rainforest. </p>
-                                    </div>
-                                </div>
-                                <div class="director-movie-2">
-                                    <img src="img/season-5-img/Fitzcarraldo.jpg" alt=""
-                                        class="director-movie-img">
-                                    <div class="director-movie-wrapper">
-                                        <div class="director-movie-titles">
-                                            <h1 class="director-movie-name"> Fitzcarraldo </h1>
-                                            <h2 class="director-movie-year"> 1982 </h2>
-                                        </div>
-                                        <p class="director-movie-desc">takes audiences on a breathtaking adventure, following a man's audacious mission to haul a steamship over a mountain in the pursuit of his grand vision. Herzog's films are renowned for their stunning visuals, exploration of human ambition, and existential themes, cementing him as one of cinema's most audacious and imaginative directors.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev sw-b-p-1"></div>
-                    <div class="swiper-button-next sw-b-n-1"></div>
-                </div>
-            </div>
-
-        </section>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="hero-label">Basra Cinema Club</p>
+      <h1 class="page-hero-title">Movie<br><em>Screenings</em></h1>
+      <p class="page-hero-desc">Five seasons of world cinema — curated for the Iraqi viewer.<br>Each film selected for its artistic and cultural weight.</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="ani.js">
+    <div class="seasons-nav">
+      <a href="#season-1" class="sn-item">S1 · American</a>
+      <a href="#season-2" class="sn-item">S2 · Iranian</a>
+      <a href="#season-3" class="sn-item">S3 · Japanese</a>
+      <a href="#season-4" class="sn-item">S4 · Palestinian</a>
+      <a href="#season-5" class="sn-item">S5 · Retrospective</a>
+    </div>
+  </section>
 
-    </script>
+  <!-- SEASON 1 — AMERICAN CINEMA -->
+  <section class="season-section" id="season-1">
+    <div class="season-header">
+      <div class="season-meta">
+        <span class="season-num">Season One</span>
+        <span class="season-divider">·</span>
+        <span class="season-country">American Cinema</span>
+      </div>
+      <h2 class="season-title">American<br><em>Cinema</em></h2>
+      <p class="season-desc">American cinema has played a pivotal role in shaping the global film industry. From classic Hollywood masterpieces to groundbreaking independent films, it has consistently pushed boundaries — leaving an indelible mark on the art form.</p>
+    </div>
+    <div class="swiper swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/citzen.jpg" alt="Citizen Kane"></div>
+          <div class="film-info">
+            <div class="film-decade">1940s</div>
+            <h3 class="film-title">Citizen Kane</h3>
+            <p class="film-director">By Orson Welles</p>
+            <p class="film-desc">Following the death of publishing tycoon Charles Foster Kane, reporters scramble to uncover the meaning of his final utterance: 'Rosebud.'</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/vertgo.jpg" alt="Vertigo"></div>
+          <div class="film-info">
+            <div class="film-decade">1950s</div>
+            <h3 class="film-title">Vertigo</h3>
+            <p class="film-director">By Alfred Hitchcock</p>
+            <p class="film-desc">A former detective wrestling with personal demons becomes obsessed with the hauntingly beautiful woman he has been hired to trail.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/download (2).jpg" alt="2001: A Space Odyssey"></div>
+          <div class="film-info">
+            <div class="film-decade">1960s</div>
+            <h3 class="film-title">2001: A Space Odyssey</h3>
+            <p class="film-director">By Stanley Kubrick</p>
+            <p class="film-desc">After uncovering a mysterious artifact beneath the Lunar surface, a spacecraft is sent to Jupiter — manned by two men and the supercomputer H.A.L.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/apocalypse now.jpg" alt="Apocalypse Now"></div>
+          <div class="film-info">
+            <div class="film-decade">1970s</div>
+            <h3 class="film-title">Apocalypse Now</h3>
+            <p class="film-director">By Francis Ford Coppola</p>
+            <p class="film-desc">A U.S. Army officer in Vietnam is tasked with assassinating a renegade Special Forces Colonel who sees himself as a god.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/images.jpg" alt="Taxi Driver"></div>
+          <div class="film-info">
+            <div class="film-decade">1970s</div>
+            <h3 class="film-title">Taxi Driver</h3>
+            <p class="film-director">By Martin Scorsese</p>
+            <p class="film-desc">A mentally unstable veteran works as a nighttime taxi driver in New York City, where the decadence and sleaze fuels his urge for violent action.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/blade runner.jpg" alt="Blade Runner"></div>
+          <div class="film-info">
+            <div class="film-decade">1980s</div>
+            <h3 class="film-title">Blade Runner</h3>
+            <p class="film-director">By Ridley Scott</p>
+            <p class="film-desc">A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/love streams.jpg" alt="Love Streams"></div>
+          <div class="film-info">
+            <div class="film-decade">1980s</div>
+            <h3 class="film-title">Love Streams</h3>
+            <p class="film-director">By John Cassavetes</p>
+            <p class="film-desc">Two closely bound, emotionally wounded souls reunite after years apart.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/the thin red line.jpg" alt="The Thin Red Line"></div>
+          <div class="film-info">
+            <div class="film-decade">1990s</div>
+            <h3 class="film-title">The Thin Red Line</h3>
+            <p class="film-director">By Terrence Malick</p>
+            <p class="film-desc">Adaptation of James Jones' autobiographical 1962 novel, focusing on the conflict at Guadalcanal during the Second World War.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/dead man.jpg" alt="Dead Man"></div>
+          <div class="film-info">
+            <div class="film-decade">1990s</div>
+            <h3 class="film-title">Dead Man</h3>
+            <p class="film-director">By Jim Jarmusch</p>
+            <p class="film-desc">On the run after murdering a man, accountant William Blake encounters a strange man named Nobody who prepares him for his journey into the spiritual world.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/there will be blood.jpg" alt="There Will Be Blood"></div>
+          <div class="film-info">
+            <div class="film-decade">2007</div>
+            <h3 class="film-title">There Will Be Blood</h3>
+            <p class="film-director">By Paul Thomas Anderson</p>
+            <p class="film-desc">A story of family, religion, hatred, oil and madness — focusing on a turn-of-the-century prospector in the early days of the business.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-1-img/the tree of life.jpg" alt="The Tree of Life"></div>
+          <div class="film-info">
+            <div class="film-decade">2000s</div>
+            <h3 class="film-title">The Tree of Life</h3>
+            <p class="film-director">By Terrence Malick</p>
+            <p class="film-desc">The story of a family in Waco, Texas in 1956. The eldest son witnesses the loss of innocence and struggles with his parents' conflicting teachings.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- SEASON 2 — IRANIAN CINEMA -->
+  <section class="season-section alt" id="season-2">
+    <div class="season-header">
+      <div class="season-meta">
+        <span class="season-num">Season Two</span>
+        <span class="season-divider">·</span>
+        <span class="season-country">Iranian Cinema</span>
+      </div>
+      <h2 class="season-title">Iranian<br><em>Cinema</em></h2>
+      <p class="season-desc">Iranian cinema holds significant importance in the global film landscape, captivating audiences with its unique storytelling and artistic expression that speaks directly to the Iraqi soul.</p>
+    </div>
+    <div class="swiper swiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-2-img/the cow.jpg" alt="The Cow"></div>
+          <div class="film-info">
+            <div class="film-decade">1969</div>
+            <h3 class="film-title">The Cow</h3>
+            <p class="film-director">By Dariush Mehrjui</p>
+            <p class="film-desc">A seminal film exploring loss and identity through the psychological transformation of a villager who assumes the persona of his cherished cow.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-2-img/the cyclist.jpg" alt="The Cyclist"></div>
+          <div class="film-info">
+            <div class="film-decade">1989</div>
+            <h3 class="film-title">The Cyclist</h3>
+            <p class="film-director">By Mohsen Makhmalbaf</p>
+            <p class="film-desc">The relentless struggle of a cyclist trying to support his family in a war-torn landscape — a profound reflection on the human spirit and resilience.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-2-img/A moment of inocence.jpg" alt="A Moment of Innocence"></div>
+          <div class="film-info">
+            <div class="film-decade">1996</div>
+            <h3 class="film-title">A Moment of Innocence</h3>
+            <p class="film-director">By Mohsen Makhmalbaf</p>
+            <p class="film-desc">A captivating film that blurs the boundaries between reality and fiction, bringing together actual participants of a violent incident to reinterpret the event.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-2-img/the Circle.jpg" alt="The Circle"></div>
+          <div class="film-info">
+            <div class="film-decade">2000</div>
+            <h3 class="film-title">The Circle</h3>
+            <p class="film-director">By Jafar Panahi</p>
+            <p class="film-desc">A gripping film that exposes the harsh realities faced by women in a patriarchal society — a powerful exploration of gender inequality.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-2-img/crimson gold.jpg" alt="Crimson Gold"></div>
+          <div class="film-info">
+            <div class="film-decade">2003</div>
+            <h3 class="film-title">Crimson Gold</h3>
+            <p class="film-director">By Jafar Panahi</p>
+            <p class="film-desc">A compelling film exploring the impact of socio-economic disparities and poverty in Tehran — a thought-provoking commentary on social injustice.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-2-img/about elly.jpg" alt="About Elly"></div>
+          <div class="film-info">
+            <div class="film-decade">2009</div>
+            <h3 class="film-title">About Elly</h3>
+            <p class="film-director">By Asghar Farhadi</p>
+            <p class="film-desc">A gripping drama exploring the consequences of secrets and lies within a group of friends during a weekend trip, delving into the fragility of trust.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-2-img/there is no evil.jpg" alt="There is No Evil"></div>
+          <div class="film-info">
+            <div class="film-decade">2020</div>
+            <h3 class="film-title">There is No Evil</h3>
+            <p class="film-director">By Mohammad Rasoulof</p>
+            <p class="film-desc">An anthology of interconnected stories examining moral dilemmas faced by individuals in a repressive society — questioning power, authority, and individual agency.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- SEASON 3 — JAPANESE CINEMA -->
+  <section class="season-section" id="season-3">
+    <div class="season-header">
+      <div class="season-meta">
+        <span class="season-num">Season Three</span>
+        <span class="season-divider">·</span>
+        <span class="season-country">Japanese Cinema</span>
+      </div>
+      <h2 class="season-title">Japanese<br><em>Cinema</em></h2>
+      <p class="season-desc">A carefully curated journey into the world of Japanese cinema — intricate visuals, profound emotions, and masterful storytelling that transcends culture and era.</p>
+    </div>
+    <div class="swiper swiper3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-3-img/Rashomon.png" alt="Rashomon"></div>
+          <div class="film-info">
+            <div class="film-decade">1950</div>
+            <h3 class="film-title">Rashomon</h3>
+            <p class="film-director">By Akira Kurosawa</p>
+            <p class="film-desc">A groundbreaking exploration of multiple perspectives on a crime, challenging the audience's perception of truth and human nature.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-3-img/Tokyo Story.webp" alt="Tokyo Story"></div>
+          <div class="film-info">
+            <div class="film-decade">1953</div>
+            <h3 class="film-title">Tokyo Story</h3>
+            <p class="film-director">By Yasujirō Ozu</p>
+            <p class="film-desc">An elderly couple visits their busy adult children in Tokyo — a poignant masterpiece on generational gap, changing values, and the universal themes of love and loss.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-3-img/Harakiri.jpg" alt="Harakiri"></div>
+          <div class="film-info">
+            <div class="film-decade">1962</div>
+            <h3 class="film-title">Harakiri</h3>
+            <p class="film-director">By Masaki Kobayashi</p>
+            <p class="film-desc">A searing critique of the samurai code and feudal hierarchy — themes of honor, duty, and maintaining integrity in the face of oppressive systems.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-3-img/Ugetsu.jpg" alt="Ugetsu"></div>
+          <div class="film-info">
+            <div class="film-decade">1953</div>
+            <h3 class="film-title">Ugetsu</h3>
+            <p class="film-director">By Kenji Mizoguchi</p>
+            <p class="film-desc">Reality and the supernatural intertwine to explore the price of ambition and the destructive nature of desire — a profound meditation on the human condition.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-3-img/Sansho the Bailiff.jpg" alt="Sansho the Bailiff"></div>
+          <div class="film-info">
+            <div class="film-decade">1954</div>
+            <h3 class="film-title">Sansho the Bailiff</h3>
+            <p class="film-director">By Kenji Mizoguchi</p>
+            <p class="film-desc">A family torn apart by social injustice and their enduring struggle for reunion — a powerful condemnation of oppression and an ode to resilience.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-3-img/Seven_Samurai_poster2.webp" alt="Seven Samurai"></div>
+          <div class="film-info">
+            <div class="film-decade">1954</div>
+            <h3 class="film-title">Seven Samurai</h3>
+            <p class="film-director">By Akira Kurosawa</p>
+            <p class="film-desc">Regarded as one of the greatest films ever made — skilled samurai defending a village, showcasing masterful storytelling and dynamic action sequences.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-3-img/ran.jpg" alt="Ran"></div>
+          <div class="film-info">
+            <div class="film-decade">1985</div>
+            <h3 class="film-title">Ran</h3>
+            <p class="film-director">By Akira Kurosawa</p>
+            <p class="film-desc">Shakespeare's "King Lear" set in feudal Japan — power, betrayal, and the destructive consequences of unchecked ambition in breathtaking cinematography.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- SEASON 4 — PALESTINIAN CINEMA -->
+  <section class="season-section alt" id="season-4">
+    <div class="season-header">
+      <div class="season-meta">
+        <span class="season-num">Season Four</span>
+        <span class="season-divider">·</span>
+        <span class="season-country">Palestinian Cinema</span>
+      </div>
+      <h2 class="season-title">The Palestinian<br><em>Case</em></h2>
+      <p class="season-desc">Films offering a diverse and compelling exploration of the Israeli-Palestinian conflict — delving into the personal, psychological, and societal complexities on both sides.</p>
+    </div>
+    <div class="swiper swiper4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-4-img/Paradise Now.jpg" alt="Paradise Now"></div>
+          <div class="film-info">
+            <div class="film-decade">2005</div>
+            <h3 class="film-title">Paradise Now</h3>
+            <p class="film-director">By Hany Abu-Assad</p>
+            <p class="film-desc">The lives of two Palestinian friends recruited as suicide bombers — a thought-provoking exploration of psychological and moral complexities of the conflict.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-4-img/Waltz with Bashir.jpg" alt="Waltz with Bashir"></div>
+          <div class="film-info">
+            <div class="film-decade">2008</div>
+            <h3 class="film-title">Waltz with Bashir</h3>
+            <p class="film-director">By Ari Folman</p>
+            <p class="film-desc">Through innovative animation, the director journeys to recover repressed memories from the 1982 Lebanon War — confronting trauma, collective memory, and the search for truth.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-4-img/The Time That Remains.jpg" alt="The Time That Remains"></div>
+          <div class="film-info">
+            <div class="film-decade">2009</div>
+            <h3 class="film-title">The Time That Remains</h3>
+            <p class="film-director">By Elia Suleiman</p>
+            <p class="film-desc">Palestinian experiences from 1948 to the present — blending humor and melancholy in a poignant reflection on identity, dignity, and survival.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-4-img/Omar.jpg" alt="Omar"></div>
+          <div class="film-info">
+            <div class="film-decade">2013</div>
+            <h3 class="film-title">Omar</h3>
+            <p class="film-director">By Hany Abu-Assad</p>
+            <p class="film-desc">A young Palestinian baker entangled in a web of surveillance, betrayal, and resistance — the complexities of living under occupation.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-4-img/Foxtrot.jpg" alt="Foxtrot"></div>
+          <div class="film-info">
+            <div class="film-decade">2017</div>
+            <h3 class="film-title">Foxtrot</h3>
+            <p class="film-director">By Samuel Maoz</p>
+            <p class="film-desc">Three interconnected narratives exploring the impact of war and grief on an Israeli family — a searing critique of the human cost of war.</p>
+          </div>
+        </div>
+        <div class="swiper-slide film-slide">
+          <div class="film-poster"><img src="img/season-4-img/lebanon.jpg" alt="Lebanon"></div>
+          <div class="film-info">
+            <div class="film-decade">2009</div>
+            <h3 class="film-title">Lebanon</h3>
+            <p class="film-director">By Samuel Maoz</p>
+            <p class="film-desc">Set entirely within an Israeli tank during the 1982 Lebanon War — a harrowing portrayal of the realities of war and the psychological toll of armed conflict.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- SEASON 5 — DIRECTOR'S RETROSPECTIVE -->
+  <section class="season-section retro-section" id="season-5">
+    <div class="season-header">
+      <div class="season-meta">
+        <span class="season-num">Season Five</span>
+        <span class="season-divider">·</span>
+        <span class="season-country">Director's Retrospective</span>
+      </div>
+      <h2 class="season-title">Director's<br><em>Retrospective</em></h2>
+      <p class="season-desc">Deep dives into the complete visions of cinema's greatest auteurs — each retrospective a journey through a filmmaker's world.</p>
+    </div>
+    <div class="swiper swiper5">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide director-slide">
+          <div class="director-portrait">
+            <img src="img/season-5-img/Bela Tarr.jpg" alt="Béla Tarr">
+            <div class="director-portrait-overlay"></div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Béla Tarr</h3>
+            <p class="director-bio">A mesmerizing retrospective of this visionary filmmaker whose long takes and philosophical depth redefined what cinema can be.</p>
+            <div class="director-films">
+              <div class="dir-film">
+                <img src="img/season-5-img/Werckmeister Harmonies.jpg" alt="Werckmeister Harmonies">
+                <div class="dir-film-info">
+                  <h4>Werckmeister Harmonies</h4>
+                  <span>2000</span>
+                  <p>A haunting journey through a Hungarian village — alienation, power, and the human condition.</p>
+                </div>
+              </div>
+              <div class="dir-film">
+                <img src="img/season-5-img/The Turin Horse.jpg" alt="The Turin Horse">
+                <div class="dir-film-info">
+                  <h4>The Turin Horse</h4>
+                  <span>2011</span>
+                  <p>A father and daughter facing the relentless hardship of existence — Tarr's atmospheric masterwork.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide director-slide">
+          <div class="director-portrait">
+            <img src="img/season-5-img/Apichatpong  Weerasethakul .png" alt="Apichatpong Weerasethakul">
+            <div class="director-portrait-overlay"></div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Apichatpong Weerasethakul</h3>
+            <p class="director-bio">The captivating world of Thailand's most visionary filmmaker — where memory, reincarnation, and the spiritual converge.</p>
+            <div class="director-films">
+              <div class="dir-film">
+                <img src="img/season-5-img/ Uncle Boonmee Who Can Recall His Past Lives.jpg" alt="Uncle Boonmee">
+                <div class="dir-film-info">
+                  <h4>Uncle Boonmee</h4>
+                  <span>2010</span>
+                  <p>A transcendent cinematic experience exploring memory, reincarnation, and the mystical realms of existence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide director-slide">
+          <div class="director-portrait">
+            <img src="img/season-5-img/Cristian Mungiu.webp" alt="Cristian Mungiu">
+            <div class="director-portrait-overlay"></div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Cristian Mungiu</h3>
+            <p class="director-bio">Romania's acclaimed filmmaker whose unflinching realism confronts moral complexity, institutional power, and the weight of history.</p>
+            <div class="director-films">
+              <div class="dir-film">
+                <img src="img/season-5-img/4 Months, 3 Weeks and 2 Days.png" alt="4 Months">
+                <div class="dir-film-info">
+                  <h4>4 Months, 3 Weeks and 2 Days</h4>
+                  <span>2007</span>
+                  <p>A harrowing, intimate portrayal of two women navigating illegal abortion in communist Romania.</p>
+                </div>
+              </div>
+              <div class="dir-film">
+                <img src="img/season-5-img/Beyond the Hills.jpg" alt="Beyond the Hills">
+                <div class="dir-film-info">
+                  <h4>Beyond the Hills</h4>
+                  <span>2012</span>
+                  <p>Faith, friendship, and institutional power — a haunting exploration of a religious community.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide director-slide">
+          <div class="director-portrait">
+            <img src="img/season-5-img/Nuri Bilge Ceylan.webp" alt="Nuri Bilge Ceylan">
+            <div class="director-portrait-overlay"></div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Nuri Bilge Ceylan</h3>
+            <p class="director-bio">Turkey's master of contemplative cinema — exquisite visuals, rich character development, and profound philosophical reflections.</p>
+            <div class="director-films">
+              <div class="dir-film">
+                <img src="img/season-5-img/Once Upon a Time in Anatolia.jpg" alt="Once Upon a Time in Anatolia">
+                <div class="dir-film-info">
+                  <h4>Once Upon a Time in Anatolia</h4>
+                  <span>2011</span>
+                  <p>A mesmerizing exploration of a night-long investigation in the Turkish countryside — truth, identity, the human condition.</p>
+                </div>
+              </div>
+              <div class="dir-film">
+                <img src="img/season-5-img/The Wild Pear Tree.jpg" alt="The Wild Pear Tree">
+                <div class="dir-film-info">
+                  <h4>The Wild Pear Tree</h4>
+                  <span>2018</span>
+                  <p>A young writer confronts his ambitions, family dynamics, and the search for meaning in life.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide director-slide">
+          <div class="director-portrait">
+            <img src="img/season-5-img/Michael Haneke.jpg" alt="Michael Haneke">
+            <div class="director-portrait-overlay"></div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Michael Haneke</h3>
+            <p class="director-bio">Austria's most provocative filmmaker — meticulous craftsmanship and unflinching examinations of human nature that provoke deep introspection.</p>
+            <div class="director-films">
+              <div class="dir-film">
+                <img src="img/season-5-img/The White Ribbon.png" alt="The White Ribbon">
+                <div class="dir-film-info">
+                  <h4>The White Ribbon</h4>
+                  <span>2009</span>
+                  <p>A rural German village on the eve of WWI — power, repression, and the origins of evil.</p>
+                </div>
+              </div>
+              <div class="dir-film">
+                <img src="img/season-5-img/Amour.jpg" alt="Amour">
+                <div class="dir-film-info">
+                  <h4>Amour</h4>
+                  <span>2012</span>
+                  <p>An elderly couple facing the challenges of aging and mortality — love, compassion, human fragility.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide director-slide">
+          <div class="director-portrait">
+            <img src="img/season-5-img/wong.jpg" alt="Wong Kar-wai">
+            <div class="director-portrait-overlay"></div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Wong Kar-wai</h3>
+            <p class="director-bio">Hong Kong's poet of longing — exquisite cinematography and exploration of memory, desire, and the complexities of human relationships.</p>
+            <div class="director-films">
+              <div class="dir-film">
+                <img src="img/season-5-img/ In the Mood for Love.jpg" alt="In the Mood for Love">
+                <div class="dir-film-info">
+                  <h4>In the Mood for Love</h4>
+                  <span>2000</span>
+                  <p>A visually stunning tale of unrequited love and longing, set in 1960s Hong Kong.</p>
+                </div>
+              </div>
+              <div class="dir-film">
+                <img src="img/season-5-img/Chungking Express.jpg" alt="Chungking Express">
+                <div class="dir-film-info">
+                  <h4>Chungking Express</h4>
+                  <span>1994</span>
+                  <p>Two distinct love stories in the bustling streets of Hong Kong — urban loneliness and fleeting connections.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide director-slide">
+          <div class="director-portrait">
+            <img src="img/season-5-img/Werner Herzog.webp" alt="Werner Herzog">
+            <div class="director-portrait-overlay"></div>
+          </div>
+          <div class="director-content">
+            <h3 class="director-name">Werner Herzog</h3>
+            <p class="director-bio">Germany's most audacious filmmaker — stunning visuals, exploration of human ambition, and existential themes that push cinema to its limits.</p>
+            <div class="director-films">
+              <div class="dir-film">
+                <img src="img/season-5-img/Aguirre, the Wrath of God.jpg" alt="Aguirre">
+                <div class="dir-film-info">
+                  <h4>Aguirre, the Wrath of God</h4>
+                  <span>1972</span>
+                  <p>Obsession and power as a conquistador's quest for El Dorado leads to madness in the Amazon.</p>
+                </div>
+              </div>
+              <div class="dir-film">
+                <img src="img/season-5-img/Fitzcarraldo.jpg" alt="Fitzcarraldo">
+                <div class="dir-film-info">
+                  <h4>Fitzcarraldo</h4>
+                  <span>1982</span>
+                  <p>A man's audacious mission to haul a steamship over a mountain in pursuit of his grand vision.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <svg class="footer-logo-icon" viewBox="0 0 90.94 90.91" xmlns="http://www.w3.org/2000/svg">
+        <polygon fill="#c85a00" points="90.94 45.45 84.12 52.26 77.28 45.47 84.1 38.66 90.94 45.45"/>
+        <rect fill="#c85a00" x="40.65" y="1.99" width="9.63" height="9.63" transform="translate(8.5 34.14) rotate(-45)"/>
+        <polygon fill="#c85a00" points="52.26 84.12 45.47 90.91 38.63 84.12 45.47 77.29 52.26 84.12"/>
+        <rect fill="#c85a00" x="2" y="40.65" width="9.63" height="9.63" transform="translate(-30.15 18.13) rotate(-45)"/>
+        <path fill="#c85a00" d="m19.7,27.05l12.88,12.88,7.35-7.35-12.88-12.88,5.53-5.53,12.88,12.88,12.89-12.89,5.5,5.55-12.87,12.87,7.35,7.36,12.88-12.88,5.53,5.53-12.88,12.88,9.47,9.47,3.43,3.4-5.54,5.54-12.88-12.88-7.35,7.35,9.46,9.47,3.43,3.4-5.54,5.54-12.88-12.88-12.88,12.88-5.53-5.53,12.88-12.88-7.35-7.35-12.89,12.89-5.51-5.55,12.87-12.87-12.88-12.88,5.53-5.53Zm18.41,18.41l7.35,7.35,7.35-7.35-7.35-7.35-7.35,7.35Z"/>
+      </svg>
+    </div>
+    <div class="footer-center">
+      <p class="footer-name">Basra Cinema Club</p>
+      <p class="footer-copy">© 2024 All rights reserved.</p>
+    </div>
+    <a href="https://www.instagram.com/basra.cinemaclub/" target="_blank" rel="noopener" class="footer-instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+        <path d="M 12 16 C 12 13.791 13.791 12 16 12 C 18.209 12 20 13.791 20 16 C 20 18.209 18.209 20 16 20 C 13.791 20 12 18.209 12 16 Z" fill="currentColor"/>
+        <path d="M 21.5 3.5 L 10.5 3.5 C 6.634 3.5 3.5 6.634 3.5 10.5 L 3.5 21.5 C 3.5 25.366 6.634 28.5 10.5 28.5 L 21.5 28.5 C 25.366 28.5 28.5 25.366 28.5 21.5 L 28.5 10.5 C 28.5 6.634 25.366 3.5 21.5 3.5 Z M 16 22 C 12.686 22 10 19.314 10 16 C 10 12.686 12.686 10 16 10 C 19.314 10 22 12.686 22 16 C 22 19.314 19.314 22 16 22 Z M 22.5 11 C 21.672 11 21 10.328 21 9.5 C 21 8.672 21.672 8 22.5 8 C 23.328 8 24 8.672 24 9.5 C 24 10.328 23.328 11 22.5 11 Z" fill="currentColor"/>
+      </svg>
+    </a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+  <script src="season.js"></script>
 </body>
-
-
-<!-- Mirrored from basracinemaclub.com/Season.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Sep 2024 00:56:38 GMT -->
 </html>
