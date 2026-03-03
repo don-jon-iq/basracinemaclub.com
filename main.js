@@ -73,7 +73,11 @@ if (typeof Swiper !== 'undefined') {
     grabCursor: true,
     loop: true,
     speed: 500,
-    freeMode: { enabled: true, momentum: true, momentumRatio: 0.5 },
+    touchStartPreventDefault: false,
+    touchMoveStopPropagation: false,
+    passiveListeners: true,
+    threshold: 10,
+    freeMode: { enabled: true, momentum: true, momentumRatio: 0.5, momentumBounce: false },
     on: {
       slideChange(swiper) {
         const total = swiper.slides.length - (swiper.loopedSlides || 0) * 2;

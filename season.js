@@ -37,15 +37,20 @@ const filmSwiperConfig = {
   grabCursor: true,
   keyboard: { enabled: true },
   a11y: { enabled: true },
+  // Critical: allow vertical scroll to pass through on mobile
+  touchStartPreventDefault: false,
+  touchMoveStopPropagation: false,
+  passiveListeners: true,
+  threshold: 10, // require 10px horizontal before capturing touch
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // Momentum scrolling on mobile
   freeMode: {
     enabled: isMobile,
     momentum: true,
-    momentumRatio: 0.7,
+    momentumRatio: 0.6,
+    momentumBounce: false,
   },
 };
 
@@ -60,6 +65,10 @@ const retroSwiper = new Swiper('.swiper5', {
   spaceBetween: 0,
   grabCursor: true,
   keyboard: { enabled: true },
+  touchStartPreventDefault: false,
+  touchMoveStopPropagation: false,
+  passiveListeners: true,
+  threshold: 10,
   effect: 'fade',
   fadeEffect: { crossFade: true },
   speed: 600,
