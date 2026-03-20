@@ -459,65 +459,10 @@ img { display: block; max-width: 100%; }
   .footer { flex-direction: column; text-align: center; }
 }
 
-/* Mobile: stack cards vertically, no horizontal scroll trap */
+/* Mobile: allow vertical scroll past sections */
 @media (max-width: 768px) {
-  .season-section {
-    overflow: visible;
-  }
-  .film-track {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    overflow: visible;
-    scroll-snap-type: none;
-    padding: 0 var(--pad) 24px;
-    touch-action: auto;
-  }
-  .film-card {
-    width: 100% !important;
-    flex-shrink: unset;
-    scroll-snap-align: none;
-  }
-  .film-poster {
-    max-height: 180px;
-    overflow: hidden;
-  }
-  .film-poster img {
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
-  }
-  .film-desc {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    font-size: 12px;
-  }
-  .film-info {
-    padding: 10px;
-  }
-  .film-title {
-    font-size: 14px;
-  }
-  .film-director {
-    font-size: 11px;
-  }
-  .film-decade {
-    font-size: 10px;
-  }
+  .film-track,
   .director-track {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    overflow: visible;
-    scroll-snap-type: none;
-    padding: 0 var(--pad) 24px;
-    touch-action: auto;
-  }
-  .director-card {
-    width: 100% !important;
-    flex-shrink: unset;
-    scroll-snap-align: none;
+    scroll-snap-type: x proximity;
   }
 }

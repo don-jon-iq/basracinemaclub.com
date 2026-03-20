@@ -100,7 +100,14 @@ document.querySelectorAll('.season-section').forEach((section, i) => {
       links.forEach((l, j) => l.classList.toggle('active', j === i));
       if (isMobile) {
         const pill = links[i];
-        if (pill) pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        const nav = document.querySelector('.seasons-nav');
+        if (pill && nav) {
+          // Only scroll the nav container horizontally, don't touch page scroll
+          const navRect = nav.getBoundingClientRect();
+          const pillRect = pill.getBoundingClientRect();
+          const scrollLeft = nav.scrollLeft + (pillRect.left - navRect.left) - (navRect.width / 2) + (pillRect.width / 2);
+          nav.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+        }
       }
     }
   });
