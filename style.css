@@ -485,8 +485,8 @@ section { padding: clamp(64px, 10vw, 120px) var(--pad); }
 .gallery-item {
   overflow: hidden;
   position: relative;
-  opacity: 0;
-  transform: translateY(32px);
+  opacity: 1;
+  /* transform handled by GSAP */
 }
 
 .gallery-item--tall { aspect-ratio: 3/4; }

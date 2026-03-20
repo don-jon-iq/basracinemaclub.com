@@ -458,3 +458,16 @@ img { display: block; max-width: 100%; }
 @media (max-width: 480px) {
   .footer { flex-direction: column; text-align: center; }
 }
+
+/* Mobile: don't trap vertical scrolling */
+@media (max-width: 768px) {
+  .season-section {
+    overflow: visible;
+  }
+  .film-track,
+  .director-track {
+    scroll-snap-type: x proximity;
+    touch-action: pan-y pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
+}

@@ -101,13 +101,13 @@ if (!isMobile) {
   // Staggered column reveal
   document.querySelectorAll('.gallery-col').forEach((col, colIdx) => {
     const items = col.querySelectorAll('.gallery-item');
-    gsap.to(items, {
+    gsap.from(items, {
       scrollTrigger: {
         trigger: '.gallery-masonry',
         start: 'top 85%',
       },
-      opacity: 1,
-      y: 0,
+      opacity: 0,
+      y: 32,
       duration: 0.7,
       stagger: 0.12,
       delay: colIdx * 0.08,
