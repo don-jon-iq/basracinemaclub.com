@@ -3,6 +3,11 @@ const path = require('path');
 const compression = require('compression');
 const helmet = require('helmet');
 const cors = require('cors');
+const { initDb } = require('./db');
+const apiRouter = require('./api');
+
+// Initialize database and seed data
+initDb();
 
 const app = express();
 const PORT = process.env.PORT || 3002;
@@ -27,6 +32,13 @@ app.use(cors());
 // Enable compression
 app.use(compression());
 
+// Parse JSON and URL-encoded bodies
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// API routes
+app.use('/api', apiRouter);
+
 // Serve static files
 app.use(express.static(path.join(__dirname, '/'), {
     maxAge: '1d',
@@ -41,6 +53,10 @@ app.get('/', (req, res) => {
 
 app.get('/Season.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'Season.html'));
+});
+
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname, 'admin.html'));
 });
 
 // Error handling
